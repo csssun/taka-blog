@@ -67,7 +67,7 @@ zola serve
 
 <div align="center">
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/csssun/taka-blog2&project-name=my-zola-blog&repository-name=my-zola-blog)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/csssun/taka-blog)
 
 **智能构建：自动尝试多种构建方案，确保部署成功！**
 
