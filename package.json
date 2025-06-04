@@ -5,6 +5,7 @@
   "scripts": {
     "build": "node build-node.js",
     "vercel-build": "node build-node.js",
+    "build-static": "node build-static.js",
     "build-bash": "bash build.sh",
     "dev": "zola serve",
     "serve": "zola serve",

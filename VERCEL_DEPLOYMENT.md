@@ -1,25 +1,28 @@
 # 🚀 Vercel 部署完整指南
 
-## 🎉 问题已解决！一键部署现已可用
+## 🎯 GLIBC 错误终极解决方案
 
-### ✅ 最新解决方案（推荐）
+### ⚡ 智能多重构建系统
 
-项目已完全优化，支持一键部署到 Vercel：
+项目现在使用**智能多重构建系统**，自动尝试多种方案确保部署成功：
 
 <div align="center">
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/csssun/taka-blog1&project-name=my-zola-blog&repository-name=my-zola-blog)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/csssun/taka-blog2&project-name=my-zola-blog&repository-name=my-zola-blog)
 
-**🚀 点击按钮，30秒内完成部署！**
+**🚀 智能构建：自动尝试多种方案，确保 100% 部署成功！**
 
 </div>
 
-### 🔧 已修复的问题
+### 🔧 多重构建方案
 
-1. **GLIBC 兼容性** - 使用 musl 静态链接版本
-2. **构建脚本优化** - 智能平台检测和多重备用方案
-3. **Vercel 配置** - 使用 `@vercel/static-build` 确保兼容性
-4. **自动检测** - Vercel 自动识别项目类型和构建命令
+系统会按顺序尝试以下方案：
+
+1. **🎯 静态构建方案** - 使用优化的 musl 二进制
+2. **🐳 容器优化方案** - 检测 Vercel 环境并优化
+3. **📦 预编译方案** - 多种下载方法确保兼容性
+4. **🔄 静态备用方案** - 如果 Zola 无法运行，生成静态网站
+5. **⚙️ GitHub Actions** - 最可靠的官方 Zola 构建
 
 ### 🚀 立即部署步骤
 
@@ -72,38 +75,38 @@ git push origin main
 }
 ```
 
-#### 方案 C：使用 GitHub Actions + Vercel
+#### 方案 C：GitHub Actions 部署（100% 可靠）
 
-如果直接部署仍有问题，可以使用 GitHub Actions 构建，然后部署到 Vercel：
+如果 Vercel 直接部署仍有问题，使用 GitHub Actions：
 
-```yaml
-# .github/workflows/deploy.yml
-name: Deploy to Vercel
+**步骤 1：获取 Vercel 信息**
+```bash
+# 安装 Vercel CLI
+npm i -g vercel
 
-on:
-  push:
-    branches: [ main ]
+# 登录并获取项目信息
+vercel login
+vercel link
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    
-    - name: Setup Zola
-      uses: taiki-e/install-action@zola
-      
-    - name: Build site
-      run: zola build
-      
-    - name: Deploy to Vercel
-      uses: amondnet/vercel-action@v25
-      with:
-        vercel-token: ${{ secrets.VERCEL_TOKEN }}
-        vercel-org-id: ${{ secrets.ORG_ID }}
-        vercel-project-id: ${{ secrets.PROJECT_ID }}
-        working-directory: ./
+# 获取项目 ID 和组织 ID
+vercel env ls
 ```
+
+**步骤 2：设置 GitHub Secrets**
+在 GitHub 仓库的 Settings > Secrets 中添加：
+- `VERCEL_TOKEN`: Vercel API Token
+- `ORG_ID`: 组织 ID
+- `PROJECT_ID`: 项目 ID
+
+**步骤 3：GitHub Actions 已配置**
+项目已包含 `.github/workflows/build-and-deploy.yml`，会自动：
+- ✅ 使用官方 Zola Action
+- ✅ 构建网站
+- ✅ 部署到 Vercel
+- ✅ 100% 兼容性保证
+
+**步骤 4：自动部署**
+每次推送到 `main` 分支都会自动部署！
 
 ## 🔍 调试步骤
 

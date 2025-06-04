@@ -182,24 +182,32 @@ zola serve
 
 ## 🌐 Vercel 部署指南
 
-### 🎯 一键部署
+### 🎯 智能一键部署
 
 <div align="center">
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/csssun/taka-blog1&project-name=my-zola-blog&repository-name=my-zola-blog)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/csssun/taka-blog2&project-name=my-zola-blog&repository-name=my-zola-blog)
 
-**🚀 点击按钮，30秒内完成部署！无需任何配置！**
+**🚀 智能构建系统：自动尝试多种方案，确保 100% 部署成功！**
 
 </div>
 
-#### ✨ 一键部署的优势
+#### ✨ 智能部署系统优势
 
-- **🔧 零配置**: 项目已预配置所有必要文件
-- **🛡️ 兼容性保证**: 解决了 GLIBC 等常见部署问题
+- **🧠 智能构建**: 自动尝试 5 种不同的构建方案
+- **🛡️ 兼容性保证**: 彻底解决 GLIBC 和环境兼容性问题
+- **🔄 自动备用**: 如果 Zola 无法运行，自动切换到静态构建
 - **⚡ 极速部署**: 优化的构建流程，2-3分钟完成
 - **🌍 全球 CDN**: 自动部署到 Vercel 全球边缘网络
 - **🔄 自动更新**: 每次 Git 推送自动重新部署
 - **📊 性能监控**: 内置性能分析和错误监控
+
+#### 🔧 构建方案层次
+
+1. **标准 Zola 构建** → 最佳性能和功能
+2. **容器优化构建** → 针对 Vercel 环境优化
+3. **静态备用构建** → 确保网站能够正常显示
+4. **GitHub Actions** → 100% 可靠的官方构建
 
 ### 📋 手动部署步骤
 

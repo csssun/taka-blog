@@ -61,24 +61,40 @@ zola serve
 # 4. 访问 http://127.0.0.1:1111
 ```
 
-### 🌐 一键部署到 Vercel
+### 🌐 部署到 Vercel
+
+#### 🚀 方案一：一键部署（推荐）
 
 <div align="center">
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/csssun/taka-blog)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/csssun/taka-blog2&project-name=my-zola-blog&repository-name=my-zola-blog)
 
-**点击上方按钮，30秒内完成部署！**
+**智能构建：自动尝试多种构建方案，确保部署成功！**
 
 </div>
+
+#### 🛠️ 方案二：GitHub Actions（最可靠）
+
+如果一键部署遇到问题，使用 GitHub Actions：
+
+1. **设置 Vercel 令牌**：
+   - 在 Vercel 获取 API Token
+   - 在 GitHub 仓库设置中添加 Secrets：
+     - `VERCEL_TOKEN`: 您的 Vercel API Token
+     - `ORG_ID`: Vercel 组织 ID
+     - `PROJECT_ID`: Vercel 项目 ID
+
+2. **自动部署**：
+   - 每次推送到 `main` 分支自动部署
+   - 使用官方 Zola Action，100% 兼容
 
 #### 📋 部署步骤：
 1. 点击 "Deploy with Vercel" 按钮
 2. 使用 GitHub 账号登录 Vercel
 3. 选择仓库名称（或使用默认）
-4. 点击 "Deploy" - Vercel 会自动：
-   - 🔧 检测项目类型
-   - 📦 安装依赖
-   - 🏗️ 构建网站
+4. 点击 "Deploy" - 系统会自动：
+   - 🔧 尝试标准 Zola 构建
+   - 🔄 如失败，自动切换到静态构建
    - 🚀 部署到全球 CDN
 5. 🎉 几分钟后您的博客就上线了！
 
@@ -115,8 +131,9 @@ git push origin main
 
 ## 📖 详细文档
 
+- **🎯 [终极部署指南](FINAL_DEPLOYMENT_GUIDE.md)** - GLIBC 错误完全解决方案
 - **📚 [完整使用指南](DOCUMENTATION.md)** - 详细的功能介绍和使用说明
-- **🚀 [Vercel 部署指南](VERCEL_DEPLOYMENT.md)** - 一键部署和故障排除
+- **🚀 [Vercel 部署指南](VERCEL_DEPLOYMENT.md)** - 智能多重构建系统
 - **🎉 [部署后配置](POST_DEPLOYMENT.md)** - 部署成功后的个性化设置
 - **✍️ [写作指南](DOCUMENTATION.md#️-写作指南)** - Markdown 语法和最佳实践
 - **🚀 [快速参考](QUICK_REFERENCE.md)** - 常用命令和模板

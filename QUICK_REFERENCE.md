@@ -17,6 +17,21 @@ zola build
 zola check
 ```
 
+### 🏗️ 构建选项
+```bash
+# 智能构建（推荐）
+npm run build
+
+# 静态备用构建
+npm run build-static
+
+# Bash 构建
+npm run build-bash
+
+# 检查部署配置
+npm run check
+```
+
 ### ✍️ 写作流程
 ```bash
 # 1. 创建新文章
@@ -36,8 +51,10 @@ git push origin main
 
 ### 🌐 部署到 Vercel
 
-#### 🚀 一键部署（推荐）
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/csssun/taka-blog1&project-name=my-zola-blog&repository-name=my-zola-blog)
+#### 🚀 智能一键部署（推荐）
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/csssun/taka-blog2&project-name=my-zola-blog&repository-name=my-zola-blog)
+
+**🧠 智能构建：自动尝试多种方案，确保部署成功！**
 
 #### 📋 手动部署
 ```bash
