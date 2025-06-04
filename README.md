@@ -67,7 +67,7 @@ zola serve
 
 <div align="center">
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/csssun/taka-blog)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/csssun/taka-blog&project-name=taka-blog&repository-name=taka-blog)
 
 **智能构建：自动尝试多种构建方案，确保部署成功！**
 
@@ -131,13 +131,13 @@ git push origin main
 
 ## 📖 详细文档
 
+- **🚀 [Vercel 一键部署](DEPLOY_TO_VERCEL.md)** - 专门的 Vercel 部署指南
 - **🎯 [终极部署指南](FINAL_DEPLOYMENT_GUIDE.md)** - GLIBC 错误完全解决方案
 - **📚 [完整使用指南](DOCUMENTATION.md)** - 详细的功能介绍和使用说明
-- **🚀 [Vercel 部署指南](VERCEL_DEPLOYMENT.md)** - 智能多重构建系统
+- **🛠️ [部署故障排除](VERCEL_DEPLOYMENT.md)** - 智能多重构建系统详解
 - **🎉 [部署后配置](POST_DEPLOYMENT.md)** - 部署成功后的个性化设置
 - **✍️ [写作指南](DOCUMENTATION.md#️-写作指南)** - Markdown 语法和最佳实践
 - **🚀 [快速参考](QUICK_REFERENCE.md)** - 常用命令和模板
-- **🔧 [故障排除](DOCUMENTATION.md#-故障排除)** - 常见问题解决方案
 
 ## 🌟 预览效果
 

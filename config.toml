@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://yourblog.com"
+base_url = "https://taka-blog.vercel.app"
 
 # Site title and description
 title = "Your Professional Blog"

@@ -21,7 +21,7 @@
 ```toml
 title = "您的博客名称"
 description = "您的博客描述"
-base_url = "https://your-domain.vercel.app"  # 替换为您的实际域名
+base_url = "https://taka-blog.vercel.app"  # 替换为您的实际域名
 
 [extra]
 author = "您的名字"
@@ -30,7 +30,7 @@ author_bio = "您的个人简介"
 
 # 更新社交媒体链接
 social_links = [
-    {name = "GitHub", url = "https://github.com/yourusername", icon = "github"},
+    {name = "GitHub", url = "https://github.com/csssun", icon = "github"},
     {name = "LinkedIn", url = "https://linkedin.com/in/yourprofile", icon = "linkedin"},
     {name = "Twitter", url = "https://twitter.com/yourusername", icon = "twitter"},
 ]

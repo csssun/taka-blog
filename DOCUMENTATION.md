@@ -130,8 +130,8 @@
 
 ```bash
 # 1. 克隆项目
-git clone https://github.com/yourusername/your-blog-repo.git
-cd your-blog-repo
+git clone https://github.com/csssun/taka-blog.git
+cd taka-blog
 
 # 2. 安装 Zola
 # Windows
@@ -186,7 +186,7 @@ zola serve
 
 <div align="center">
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/csssun/taka-blog2&project-name=my-zola-blog&repository-name=my-zola-blog)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/csssun/taka-blog&project-name=taka-blog&repository-name=taka-blog)
 
 **🚀 智能构建系统：自动尝试多种方案，确保 100% 部署成功！**
 
@@ -221,7 +221,7 @@ git commit -m "🎉 Initial commit: Professional Zola blog"
 
 # 推送到 GitHub
 git branch -M main
-git remote add origin https://github.com/yourusername/your-blog-repo.git
+git remote add origin https://github.com/csssun/taka-blog.git
 git push -u origin main
 ```
 
