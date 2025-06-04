@@ -68,12 +68,12 @@ const checks = [
         check: () => {
             try {
                 const vercelConfig = JSON.parse(fs.readFileSync('vercel.json', 'utf8'));
-                return vercelConfig.version === 2 && vercelConfig.builds;
+                return vercelConfig.buildCommand && vercelConfig.outputDirectory;
             } catch {
                 return false;
             }
         },
-        fix: '确保 vercel.json 格式正确'
+        fix: '确保 vercel.json 包含 buildCommand 和 outputDirectory'
     }
 ];
 
@@ -83,9 +83,9 @@ checks.forEach((check, index) => {
     const passed = check.check();
     const status = passed ? '✅' : '❌';
     const message = passed ? '通过' : '失败';
-    
+
     console.log(`${status} ${check.name}: ${message}`);
-    
+
     if (!passed) {
         console.log(`   💡 解决方案: ${check.fix}`);
         allPassed = false;

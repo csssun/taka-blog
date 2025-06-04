@@ -137,11 +137,13 @@ function makeExecutable() {
 function verifyInstallation() {
     console.log('🔍 Verifying Zola installation...');
     try {
-        execSync('./zola --version', { stdio: 'inherit' });
+        execSync('./zola --version', { stdio: 'pipe' });
         console.log('✅ Zola is working');
+        return true;
     } catch (error) {
-        console.error('❌ Zola verification failed');
-        process.exit(1);
+        console.log('❌ Zola verification failed:', error.message);
+        console.log('🔄 Will use static fallback build...');
+        return false;
     }
 }
 
@@ -156,24 +158,52 @@ function buildSite() {
     }
 }
 
+// Static fallback function
+function runStaticFallback() {
+    console.log('🔄 Running static fallback build...');
+    try {
+        // Import and run the static build script
+        const { execSync } = require('child_process');
+        execSync('node build-static.js', { stdio: 'inherit' });
+        console.log('✅ Static fallback build completed successfully');
+        return true;
+    } catch (error) {
+        console.error('❌ Static fallback build failed:', error.message);
+        return false;
+    }
+}
+
 // Main execution
 try {
     downloadAndExtract();
     makeExecutable();
-    verifyInstallation();
-    buildSite();
-} catch (error) {
-    console.error('❌ Zola build process failed:', error.message);
-    console.log('🔄 Attempting static fallback build...');
 
-    try {
-        // Try static fallback
-        require('./build-static.js');
-        console.log('✅ Static fallback build completed');
-        process.exit(0);
-    } catch (fallbackError) {
-        console.error('❌ Static fallback also failed:', fallbackError.message);
-        console.error('🆘 Please use GitHub Actions workflow for reliable deployment');
+    // Check if Zola works
+    if (verifyInstallation()) {
+        // Zola works, try to build with it
+        try {
+            buildSite();
+            console.log('🎉 Zola build completed successfully!');
+        } catch (buildError) {
+            console.log('❌ Zola build failed, trying static fallback...');
+            if (!runStaticFallback()) {
+                process.exit(1);
+            }
+        }
+    } else {
+        // Zola doesn't work, use static fallback
+        console.log('🔄 Zola verification failed, using static fallback...');
+        if (!runStaticFallback()) {
+            console.error('🆘 All build methods failed. Please use GitHub Actions for deployment.');
+            process.exit(1);
+        }
+    }
+} catch (error) {
+    console.error('❌ Build process failed:', error.message);
+    console.log('🔄 Attempting static fallback as last resort...');
+
+    if (!runStaticFallback()) {
+        console.error('🆘 All build methods failed. Please use GitHub Actions for deployment.');
         process.exit(1);
     }
 }

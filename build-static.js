@@ -23,14 +23,28 @@ function createStaticSite() {
     if (fs.existsSync('static')) {
         console.log('📁 Copying static assets...');
         try {
-            const os = require('os');
-            if (os.platform() === 'win32') {
-                execSync('xcopy static public\\ /E /I /Y', { stdio: 'pipe' });
-            } else {
-                execSync('cp -r static/* public/', { stdio: 'pipe' });
-            }
+            const copyRecursive = (src, dest) => {
+                if (!fs.existsSync(dest)) {
+                    fs.mkdirSync(dest, { recursive: true });
+                }
+
+                const items = fs.readdirSync(src);
+                for (const item of items) {
+                    const srcPath = path.join(src, item);
+                    const destPath = path.join(dest, item);
+
+                    if (fs.statSync(srcPath).isDirectory()) {
+                        copyRecursive(srcPath, destPath);
+                    } else {
+                        fs.copyFileSync(srcPath, destPath);
+                    }
+                }
+            };
+
+            copyRecursive('static', 'public');
+            console.log('✅ Static assets copied successfully');
         } catch (error) {
-            console.log('⚠️ Static assets copy failed, continuing...');
+            console.log('⚠️ Static assets copy failed:', error.message);
         }
     }
 

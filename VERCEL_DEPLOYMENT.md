@@ -26,20 +26,19 @@
 
 ### 🚀 立即部署步骤
 
-#### 1. 推送更新到 GitHub
+#### 1. 一键部署（推荐）
 
-```bash
-# 在您的项目目录中
-git add .
-git commit -m "🔧 Fix Vercel deployment compatibility issues"
-git push origin main
-```
+点击上方的一键部署按钮，系统会：
+- ✅ 自动尝试标准 Zola 构建
+- ✅ 如果失败，自动切换到静态备用构建
+- ✅ 确保网站能够正常显示
 
-#### 2. 在 Vercel 中重新部署
+#### 2. 手动重新部署
 
-- 进入您的 Vercel 项目面板
+如果您已经有 Vercel 项目：
+- 进入 Vercel 项目面板
 - 点击 "Redeploy" 按钮
-- 或者推送新的提交会自动触发部署
+- 系统会使用最新的智能构建脚本
 
 ### 🛠️ 如果仍然失败，尝试以下方案：
 
