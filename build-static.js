@@ -115,7 +115,7 @@ function createStaticSite() {
                             </a>
                         </div>
                     </article>
-                    
+
                     <article class="post-card animate-on-scroll">
                         <div class="post-meta">
                             <time>January 01, 2024</time>

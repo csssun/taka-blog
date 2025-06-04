@@ -131,6 +131,7 @@ git push origin main
 
 ## 📖 详细文档
 
+- **🔧 [导航修复报告](NAVIGATION_FIX.md)** - 子页面跳转问题解决方案
 - **📊 [部署状态报告](DEPLOYMENT_STATUS.md)** - GLIBC 错误最终解决方案和测试结果
 - **🚀 [Vercel 一键部署](DEPLOY_TO_VERCEL.md)** - 专门的 Vercel 部署指南
 - **🎯 [终极部署指南](FINAL_DEPLOYMENT_GUIDE.md)** - 完整的部署解决方案

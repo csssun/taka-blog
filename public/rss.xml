@@ -2,19 +2,19 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
       <title>Your Professional Blog</title>
-      <link>https://yourblog.com</link>
+      <link>/</link>
       <description>A modern, elegant blog showcasing technical expertise and insights</description>
       <generator>Zola</generator>
       <language>en</language>
-      <atom:link href="https://yourblog.com/rss.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
       <lastBuildDate>Sat, 20 Jan 2024 00:00:00 +0000</lastBuildDate>
       <item>
           <title>如何在这个博客中写文章</title>
           <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://yourblog.com/blog/how-to-write-posts/</link>
-          <guid>https://yourblog.com/blog/how-to-write-posts/</guid>
-          <description xml:base="https://yourblog.com/blog/how-to-write-posts/">&lt;h1 id=&quot;ru-he-zai-zhe-ge-bo-ke-zhong-xie-wen-zhang&quot;&gt;如何在这个博客中写文章&lt;&#x2F;h1&gt;
+          <link>/blog/how-to-write-posts/</link>
+          <guid>/blog/how-to-write-posts/</guid>
+          <description xml:base="/blog/how-to-write-posts/">&lt;h1 id=&quot;ru-he-zai-zhe-ge-bo-ke-zhong-xie-wen-zhang&quot;&gt;如何在这个博客中写文章&lt;&#x2F;h1&gt;
 &lt;p&gt;欢迎来到您的新博客！这篇文章将教您如何创建和发布新的博客文章。&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;memo-chuang-jian-xin-wen-zhang&quot;&gt;📝 创建新文章&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;1-wen-jian-wei-zhi&quot;&gt;1. 文件位置&lt;&#x2F;h3&gt;
@@ -154,9 +154,9 @@
           <title>Getting Started with Zola: A Modern Static Site Generator</title>
           <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://yourblog.com/blog/getting-started-with-zola/</link>
-          <guid>https://yourblog.com/blog/getting-started-with-zola/</guid>
-          <description xml:base="https://yourblog.com/blog/getting-started-with-zola/">&lt;p&gt;Static site generators have revolutionized how we build and deploy websites. Among the many options available, &lt;strong&gt;Zola&lt;&#x2F;strong&gt; stands out as a particularly compelling choice for developers who value performance, simplicity, and modern tooling.&lt;&#x2F;p&gt;
+          <link>/blog/getting-started-with-zola/</link>
+          <guid>/blog/getting-started-with-zola/</guid>
+          <description xml:base="/blog/getting-started-with-zola/">&lt;p&gt;Static site generators have revolutionized how we build and deploy websites. Among the many options available, &lt;strong&gt;Zola&lt;&#x2F;strong&gt; stands out as a particularly compelling choice for developers who value performance, simplicity, and modern tooling.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;why-choose-zola&quot;&gt;Why Choose Zola?&lt;&#x2F;h2&gt;
 &lt;p&gt;Zola is a static site generator written in Rust that compiles to a single binary with no dependencies. This means:&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -360,9 +360,9 @@
           <title>Modern CSS Techniques for Professional Web Design</title>
           <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://yourblog.com/blog/modern-css-techniques/</link>
-          <guid>https://yourblog.com/blog/modern-css-techniques/</guid>
-          <description xml:base="https://yourblog.com/blog/modern-css-techniques/">&lt;p&gt;CSS has evolved tremendously over the past few years. Modern browsers now support powerful features that were once only possible with JavaScript or complex workarounds. Let’s explore some cutting-edge CSS techniques that can transform your web designs.&lt;&#x2F;p&gt;
+          <link>/blog/modern-css-techniques/</link>
+          <guid>/blog/modern-css-techniques/</guid>
+          <description xml:base="/blog/modern-css-techniques/">&lt;p&gt;CSS has evolved tremendously over the past few years. Modern browsers now support powerful features that were once only possible with JavaScript or complex workarounds. Let’s explore some cutting-edge CSS techniques that can transform your web designs.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;css-custom-properties-variables&quot;&gt;CSS Custom Properties (Variables)&lt;&#x2F;h2&gt;
 &lt;p&gt;CSS custom properties have revolutionized how we handle theming and maintainable stylesheets.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;basic-usage&quot;&gt;Basic Usage&lt;&#x2F;h3&gt;
@@ -786,9 +786,9 @@
           <title>Building Web Applications with Rust: A Comprehensive Guide</title>
           <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://yourblog.com/blog/rust-web-development/</link>
-          <guid>https://yourblog.com/blog/rust-web-development/</guid>
-          <description xml:base="https://yourblog.com/blog/rust-web-development/">&lt;p&gt;Rust has emerged as a compelling choice for web development, offering memory safety, fearless concurrency, and exceptional performance. Let’s explore how to build modern web applications with Rust and why it’s becoming increasingly popular for backend development.&lt;&#x2F;p&gt;
+          <link>/blog/rust-web-development/</link>
+          <guid>/blog/rust-web-development/</guid>
+          <description xml:base="/blog/rust-web-development/">&lt;p&gt;Rust has emerged as a compelling choice for web development, offering memory safety, fearless concurrency, and exceptional performance. Let’s explore how to build modern web applications with Rust and why it’s becoming increasingly popular for backend development.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;why-rust-for-web-development&quot;&gt;Why Rust for Web Development?&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;performance-and-safety&quot;&gt;Performance and Safety&lt;&#x2F;h3&gt;
 &lt;p&gt;Rust combines the performance of C++ with the safety of higher-level languages:&lt;&#x2F;p&gt;
@@ -1358,9 +1358,9 @@
           <title>About Me</title>
           <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://yourblog.com/about/</link>
-          <guid>https://yourblog.com/about/</guid>
-          <description xml:base="https://yourblog.com/about/">&lt;h1 id=&quot;about-me&quot;&gt;About Me&lt;&#x2F;h1&gt;
+          <link>/about/</link>
+          <guid>/about/</guid>
+          <description xml:base="/about/">&lt;h1 id=&quot;about-me&quot;&gt;About Me&lt;&#x2F;h1&gt;
 &lt;div class=&quot;hero-intro&quot; style=&quot;text-align: center; padding: 3rem 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 1rem; margin-bottom: 3rem; color: white;&quot;&gt;
   &lt;div style=&quot;font-size: 4rem; margin-bottom: 1rem;&quot;&gt;👨‍💻&lt;&#x2F;div&gt;
   &lt;h2 style=&quot;color: white; margin-bottom: 1rem;&quot;&gt;Hello! I&#x27;m a passionate software developer&lt;&#x2F;h2&gt;
@@ -1493,9 +1493,9 @@
           <title>Contact Me</title>
           <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://yourblog.com/contact/</link>
-          <guid>https://yourblog.com/contact/</guid>
-          <description xml:base="https://yourblog.com/contact/">&lt;h1 id=&quot;get-in-touch&quot;&gt;Get In Touch&lt;&#x2F;h1&gt;
+          <link>/contact/</link>
+          <guid>/contact/</guid>
+          <description xml:base="/contact/">&lt;h1 id=&quot;get-in-touch&quot;&gt;Get In Touch&lt;&#x2F;h1&gt;
 &lt;div class=&quot;contact-hero&quot; style=&quot;text-align: center; padding: 3rem 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 1rem; margin-bottom: 3rem; color: white;&quot;&gt;
   &lt;div style=&quot;font-size: 4rem; margin-bottom: 1rem;&quot;&gt;📬&lt;&#x2F;div&gt;
   &lt;h2 style=&quot;color: white; margin-bottom: 1rem;&quot;&gt;Let&#x27;s Connect!&lt;&#x2F;h2&gt;

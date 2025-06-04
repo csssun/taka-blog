@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://yourblog.com/</loc>
+        <loc>/</loc>
     </url>
     <url>
-        <loc>https://yourblog.com/about/</loc>
+        <loc>/about/</loc>
         <lastmod>2024-01-01</lastmod>
     </url>
     <url>
-        <loc>https://yourblog.com/blog/</loc>
+        <loc>/blog/</loc>
     </url>
     <url>
-        <loc>https://yourblog.com/blog/getting-started-with-zola/</loc>
+        <loc>/blog/getting-started-with-zola/</loc>
         <lastmod>2024-01-15</lastmod>
     </url>
     <url>
-        <loc>https://yourblog.com/blog/how-to-write-posts/</loc>
+        <loc>/blog/how-to-write-posts/</loc>
         <lastmod>2024-01-20</lastmod>
     </url>
     <url>
-        <loc>https://yourblog.com/blog/modern-css-techniques/</loc>
+        <loc>/blog/modern-css-techniques/</loc>
         <lastmod>2024-01-10</lastmod>
     </url>
     <url>
-        <loc>https://yourblog.com/blog/page/1/</loc>
+        <loc>/blog/page/1/</loc>
     </url>
     <url>
-        <loc>https://yourblog.com/blog/rust-web-development/</loc>
+        <loc>/blog/rust-web-development/</loc>
         <lastmod>2024-01-05</lastmod>
     </url>
     <url>
-        <loc>https://yourblog.com/contact/</loc>
+        <loc>/contact/</loc>
         <lastmod>2024-01-01</lastmod>
     </url>
     <url>
-        <loc>https://yourblog.com/page/1/</loc>
+        <loc>/page/1/</loc>
     </url>
 </urlset>
