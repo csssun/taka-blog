@@ -63,7 +63,7 @@ zola serve
 
 ### 🌐 一键部署到 Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/your-blog-repo)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/csssun/taka-blog)
 
 ### ✍️ 写第一篇文章
 
