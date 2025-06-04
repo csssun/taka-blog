@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+
+{% block title %}{{ config.title }} - {{ config.description }}{% endblock title %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Welcome to <span class="highlight">{{ config.title }}</span></h1>
+        <p class="subtitle">{{ config.description }}</p>
+        <a href="/blog/" class="cta-button">
+            <i class="fas fa-rocket"></i>
+            Explore My Blog
+        </a>
+    </div>
+</section>
+
+<!-- Search Section -->
+{% if config.build_search_index %}
+<section class="search-section">
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search articles..." autocomplete="off">
+            <div class="search-results"></div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Featured Posts Section -->
+<section class="featured-posts">
+    <div class="container">
+        <h2>Latest Articles</h2>
+
+        {% if paginator %}
+        {% set posts = paginator.pages %}
+        {% else %}
+        {% set posts = section.pages %}
+        {% endif %}
+
+        {% if posts %}
+        <div class="posts-grid">
+            {% for post in posts | slice(end=6) %}
+            <article class="post-card animate-on-scroll">
+                <div class="post-meta">
+                    <time datetime="{{ post.date }}">
+                        {{ post.date | date(format="%B %d, %Y") }}
+                    </time>
+                    {% if post.reading_time %}
+                    <span class="reading-time">{{ post.reading_time }} min read</span>
+                    {% endif %}
+                    {% if post.taxonomies.categories %}
+                    <span class="category">
+                        {{ post.taxonomies.categories.0 }}
+                    </span>
+                    {% endif %}
+                </div>
+
+                <h3 class="post-title">
+                    <a href="{{ post.permalink }}">{{ post.title }}</a>
+                </h3>
+
+                {% if post.summary %}
+                <p class="post-excerpt">{{ post.summary }}</p>
+                {% elif post.description %}
+                <p class="post-excerpt">{{ post.description }}</p>
+                {% else %}
+                <p class="post-excerpt">{{ post.content | striptags | truncate(length=150) }}</p>
+                {% endif %}
+
+                {% if post.taxonomies.tags %}
+                <div class="post-tags">
+                    {% for tag in post.taxonomies.tags | slice(end=3) %}
+                    <span class="tag">
+                        #{{ tag }}
+                    </span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                <div class="post-footer">
+                    <a href="{{ post.permalink }}">
+                        <i class="fas fa-arrow-right"></i>
+                        Read More
+                    </a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        <!-- View All Posts Button -->
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="/blog/" class="cta-button">View All Posts</a>
+        </div>
+        {% else %}
+        <div style="text-align: center; padding: 3rem 0;">
+            <h3>No posts yet</h3>
+            <p>Check back soon for new content!</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- About Preview Section -->
+<section class="about-preview" style="background-color: var(--color-bg-secondary); padding: 4rem 0; margin-top: 4rem;">
+    <div class="container">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2>About {{ config.extra.author }}</h2>
+            <p style="font-size: 1.125rem; color: var(--color-text-light); margin-bottom: 2rem;">
+                {{ config.extra.author_bio }}
+            </p>
+
+            {% if config.extra.social_links %}
+            <div class="social-links" style="justify-content: center; margin-bottom: 2rem;">
+                {% for social in config.extra.social_links %}
+                <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ social.name }}">
+                    {% if social.icon == "github" %}🐙
+                    {% elif social.icon == "linkedin" %}💼
+                    {% elif social.icon == "twitter" %}🐦
+                    {% elif social.icon == "email" %}📧
+                    {% else %}🔗{% endif %}
+                </a>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <a href="/about/" class="cta-button">Learn More About Me</a>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Signup (Optional) -->
+<section class="newsletter-signup" style="padding: 3rem 0;">
+    <div class="container">
+        <div
+            style="max-width: 600px; margin: 0 auto; text-align: center; padding: 2rem; background-color: var(--color-bg-secondary); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+            <h3>Stay Updated</h3>
+            <p style="color: var(--color-text-light); margin-bottom: 1.5rem;">
+                Get notified when I publish new articles and insights.
+            </p>
+
+            <!-- Replace with your newsletter service -->
+            <form style="display: flex; gap: 1rem; max-width: 400px; margin: 0 auto;"
+                onsubmit="event.preventDefault(); alert('Newsletter signup would be integrated here!');">
+                <input type="email" placeholder="Enter your email" required
+                    style="flex: 1; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); background-color: var(--color-bg); color: var(--color-text);">
+                <button type="submit"
+                    style="padding: 0.75rem 1.5rem; background-color: var(--color-primary); color: white; border: none; border-radius: var(--radius-md); font-weight: 600; cursor: pointer; transition: background-color 0.2s;">
+                    Subscribe
+                </button>
+            </form>
+
+            <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-top: 1rem;">
+                No spam, unsubscribe at any time.
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+{% block structured_data %},
+"mainEntity": {
+"@type": "Blog",
+"name": "{{ config.title }}",
+"description": "{{ config.description }}",
+"url": "{{ config.base_url }}",
+"author": {
+"@type": "Person",
+"name": "{{ config.extra.author }}",
+"email": "{{ config.extra.author_email }}"
+}
+}{% endblock structured_data %}

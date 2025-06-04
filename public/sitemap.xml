@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://yourblog.com/</loc>
+    </url>
+    <url>
+        <loc>https://yourblog.com/about/</loc>
+        <lastmod>2024-01-01</lastmod>
+    </url>
+    <url>
+        <loc>https://yourblog.com/blog/</loc>
+    </url>
+    <url>
+        <loc>https://yourblog.com/blog/getting-started-with-zola/</loc>
+        <lastmod>2024-01-15</lastmod>
+    </url>
+    <url>
+        <loc>https://yourblog.com/blog/modern-css-techniques/</loc>
+        <lastmod>2024-01-10</lastmod>
+    </url>
+    <url>
+        <loc>https://yourblog.com/blog/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://yourblog.com/blog/rust-web-development/</loc>
+        <lastmod>2024-01-05</lastmod>
+    </url>
+    <url>
+        <loc>https://yourblog.com/contact/</loc>
+        <lastmod>2024-01-01</lastmod>
+    </url>
+    <url>
+        <loc>https://yourblog.com/page/1/</loc>
+    </url>
+</urlset>

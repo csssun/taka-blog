@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="{{ config.default_language | default(value=" en") }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+    <meta name="author" content="{{ config.extra.author }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="{% block og_type %}website{% endblock og_type %}">
+    <meta property="og:url" content="{{ current_url | default(value=config.base_url) }}">
+    <meta property="og:title" content="{% block og_title %}{{ config.title }}{% endblock og_title %}">
+    <meta property="og:description"
+        content="{% block og_description %}{{ config.description }}{% endblock og_description %}">
+    <meta property="og:image"
+        content="{% block og_image %}{{ config.base_url }}/images/og-image.jpg{% endblock og_image %}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ current_url | default(value=config.base_url) }}">
+    <meta property="twitter:title" content="{% block twitter_title %}{{ config.title }}{% endblock twitter_title %}">
+    <meta property="twitter:description"
+        content="{% block twitter_description %}{{ config.description }}{% endblock twitter_description %}">
+    <meta property="twitter:image"
+        content="{% block twitter_image %}{{ config.base_url }}/images/og-image.jpg{% endblock twitter_image %}">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="{{ config.extra.theme_color | default(value=" #2563eb") }}">
+    <meta name="msapplication-TileColor" content="{{ config.extra.theme_color | default(value=" #2563eb") }}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- RSS Feed -->
+    {% if config.generate_feeds %}
+    <link rel="alternate" type="application/rss+xml" title="{{ config.title }}" href="/rss.xml">
+    {% endif %}
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ current_url | default(value=config.base_url) }}">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/main.css">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Analytics -->
+    {% if config.extra.google_analytics %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.google_analytics }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '{{ config.extra.google_analytics }}');
+    </script>
+    {% endif %}
+
+    <!-- Google Site Verification -->
+    {% if config.extra.google_site_verification %}
+    <meta name="google-site-verification" content="{{ config.extra.google_site_verification }}">
+    {% endif %}
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "{% block schema_type %}WebSite{% endblock schema_type %}",
+        "name": "{{ config.title }}",
+        "description": "{{ config.description }}",
+        "url": "{{ config.base_url }}",
+        "author": {
+            "@type": "Person",
+            "name": "{{ config.extra.author }}",
+            "email": "{{ config.extra.author_email }}"
+        }
+        {% block structured_data %}{% endblock structured_data %}
+    }
+    </script>
+
+    {% block extra_head %}{% endblock extra_head %}
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    {{ config.title }}
+                </a>
+
+                <nav class="nav">
+                    {% for item in config.extra.menu %}
+                    <a href="{{ get_url(path=item.url) }}" {% if current_path and current_path==item.url
+                        %}class="active" {% endif %}>
+                        {{ item.name }}
+                    </a>
+                    {% endfor %}
+                </nav>
+
+                <div class="header-actions">
+                    {% if config.extra.enable_dark_mode %}
+                    <button class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    {% endif %}
+                    <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <p>{{ config.extra.author_bio }}</p>
+                    {% if config.extra.social_links %}
+                    <div class="social-links">
+                        {% for social in config.extra.social_links %}
+                        <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer"
+                            aria-label="{{ social.name }}">
+                            {% if social.icon == "github" %}🐙
+                            {% elif social.icon == "linkedin" %}💼
+                            {% elif social.icon == "twitter" %}🐦
+                            {% elif social.icon == "email" %}📧
+                            {% else %}🔗{% endif %}
+                        </a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        {% for item in config.extra.menu %}
+                        <li><a href="{{ get_url(path=item.url) }}">{{ item.name }}</a></li>
+                        {% endfor %}
+                        {% if config.generate_feeds %}
+                        <li><a href="/rss.xml">RSS Feed</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="/blog/">All Posts</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>{{ config.extra.footer_text }}</p>
+                <p>&copy; {{ now() | date(format="%Y") }} {{ config.extra.author }}. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    {% block extra_scripts %}{% endblock extra_scripts %}
+</body>
+
+</html>

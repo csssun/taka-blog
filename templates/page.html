@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - {{ config.title }}{% endblock title %}
+
+{% block description %}
+{% if page.description %}{{ page.description }}
+{% elif page.summary %}{{ page.summary }}
+{% else %}{{ page.content | striptags | truncate(length=160) }}{% endif %}
+{% endblock description %}
+
+{% block og_type %}article{% endblock og_type %}
+{% block og_title %}{{ page.title }}{% endblock og_title %}
+{% block og_description %}
+{% if page.description %}{{ page.description }}
+{% elif page.summary %}{{ page.summary }}
+{% else %}{{ page.content | striptags | truncate(length=160) }}{% endif %}
+{% endblock og_description %}
+
+{% block schema_type %}Article{% endblock schema_type %}
+
+{% block content %}
+<div class="container">
+    <article class="blog-post" style="max-width: 800px; margin: 0 auto;">
+        <!-- Post Header -->
+        <header class="post-header"
+            style="text-align: center; padding: 2rem 0 3rem; border-bottom: 1px solid var(--color-border);">
+            {% if page.taxonomies.categories %}
+            <div class="post-category" style="margin-bottom: 1rem;">
+                <span class="tag" style="background-color: var(--color-primary); color: white; font-size: 0.875rem;">
+                    {{ page.taxonomies.categories.0 }}
+                </span>
+            </div>
+            {% endif %}
+
+            <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.2;">
+                {{ page.title }}
+            </h1>
+
+            {% if page.description %}
+            <p
+                style="font-size: 1.25rem; color: var(--color-text-light); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                {{ page.description }}
+            </p>
+            {% endif %}
+
+            <div class="post-meta"
+                style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; color: var(--color-text-muted); font-size: 0.875rem;">
+                <time datetime="{{ page.date }}">
+                    📅 {{ page.date | date(format="%B %d, %Y") }}
+                </time>
+                {% if page.reading_time %}
+                <span>⏱️ {{ page.reading_time }} min read</span>
+                {% endif %}
+                {% if page.extra.author %}
+                <span>✍️ {{ page.extra.author }}</span>
+                {% else %}
+                <span>✍️ {{ config.extra.author }}</span>
+                {% endif %}
+            </div>
+        </header>
+
+        <!-- Post Content -->
+        <div class="post-content" style="padding: 3rem 0; line-height: 1.8; font-size: 1.125rem;">
+            {{ page.content | safe }}
+        </div>
+
+        <!-- Post Footer -->
+        <footer class="post-footer" style="padding: 2rem 0; border-top: 1px solid var(--color-border);">
+            <!-- Tags -->
+            {% if page.taxonomies.tags %}
+            <div class="post-tags" style="margin-bottom: 2rem;">
+                <h3 style="font-size: 1rem; margin-bottom: 1rem; color: var(--color-text);">Tags:</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    {% for tag in page.taxonomies.tags %}
+                    <span class="tag">
+                        #{{ tag }}
+                    </span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Share Buttons -->
+            <div class="share-buttons" style="margin-bottom: 2rem;">
+                <h3 style="font-size: 1rem; margin-bottom: 1rem; color: var(--color-text);">Share this post:</h3>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="https://twitter.com/intent/tweet?text={{ page.title | urlencode }}&url={{ page.permalink | urlencode }}"
+                        target="_blank" rel="noopener noreferrer"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background-color: #1da1f2; color: white; border-radius: var(--radius-md); text-decoration: none; font-size: 0.875rem;">
+                        🐦 Twitter
+                    </a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.permalink | urlencode }}"
+                        target="_blank" rel="noopener noreferrer"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background-color: #0077b5; color: white; border-radius: var(--radius-md); text-decoration: none; font-size: 0.875rem;">
+                        💼 LinkedIn
+                    </a>
+                    <button onclick="copyToClipboard('{{ page.permalink }}')"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background-color: var(--color-bg-tertiary); color: var(--color-text); border: 1px solid var(--color-border); border-radius: var(--radius-md); cursor: pointer; font-size: 0.875rem;">
+                        🔗 Copy Link
+                    </button>
+                </div>
+            </div>
+
+            <!-- Author Bio -->
+            <div class="author-bio"
+                style="padding: 2rem; background-color: var(--color-bg-secondary); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+                <h3 style="margin-bottom: 1rem;">About the Author</h3>
+                <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                    <div
+                        style="flex-shrink: 0; width: 80px; height: 80px; background: linear-gradient(135deg, var(--color-primary), var(--color-accent)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white;">
+                        👤
+                    </div>
+                    <div style="flex: 1;">
+                        <h4 style="margin-bottom: 0.5rem;">{{ config.extra.author }}</h4>
+                        <p style="color: var(--color-text-light); margin-bottom: 1rem;">
+                            {{ config.extra.author_bio }}
+                        </p>
+                        {% if config.extra.social_links %}
+                        <div class="social-links">
+                            {% for social in config.extra.social_links %}
+                            <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer"
+                                aria-label="{{ social.name }}">
+                                {% if social.icon == "github" %}🐙
+                                {% elif social.icon == "linkedin" %}💼
+                                {% elif social.icon == "twitter" %}🐦
+                                {% elif social.icon == "email" %}📧
+                                {% else %}🔗{% endif %}
+                            </a>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </article>
+
+    <!-- Navigation -->
+    <nav class="post-navigation" style="margin-top: 3rem; padding: 2rem 0; border-top: 1px solid var(--color-border);">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="/blog/" style="color: var(--color-primary); text-decoration: none; font-weight: 600;">
+                ← Back to Blog
+            </a>
+            <a href="#top" style="color: var(--color-primary); text-decoration: none; font-weight: 600;">
+                ↑ Back to Top
+            </a>
+        </div>
+    </nav>
+</div>
+{% endblock content %}
+
+{% block structured_data %},
+"headline": "{{ page.title }}",
+"datePublished": "{{ page.date }}",
+"dateModified": "{% if page.updated %}{{ page.updated }}{% else %}{{ page.date }}{% endif %}",
+"author": {
+"@type": "Person",
+"name": "{% if page.extra.author %}{{ page.extra.author }}{% else %}{{ config.extra.author }}{% endif %}"
+},
+"publisher": {
+"@type": "Organization",
+"name": "{{ config.title }}",
+"url": "{{ config.base_url }}"
+},
+"mainEntityOfPage": {
+"@type": "WebPage",
+"@id": "{{ page.permalink }}"
+}{% endblock structured_data %}
+
+{% block extra_scripts %}
+<script>
+functio    Clipboard(text) {
+        navigator.c        oard.writeText(text).then(function () {
+        co nst b            event.target;
+            const original            utton.innerHTML;
+        butt            HTML = '✅ Copied!';
+            button.styl            oundColor = 'var(--color-primary                button.style.color = 'white';
+        
+        setT            ) => {
+            button.inneo            ext;
+            bu                ackgroundColor = 'var(--color-bg-                            button.style.color = 'var(--color - text)';
+
+        }).catch (function(err) {
+        cons            r('Could n        opy text: ', err);
+            'Could not copy link to clipboard');
+        });
+    }
+</script>
+{% endblock extra_scripts %}

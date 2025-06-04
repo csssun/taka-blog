@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Getting Started with Zola: A Modern Static Site Generator - Your Professional Blog</title>
+    <meta name="description" content="
+Learn how to build fast, secure, and beautiful static websites using Zola, a powerful static site generator written in Rust
+
+">
+    <meta name="author" content="Your Name">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https:&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;getting-started-with-zola&#x2F;">
+    <meta property="og:title" content="Getting Started with Zola: A Modern Static Site Generator">
+    <meta property="og:description"
+        content="
+Learn how to build fast, secure, and beautiful static websites using Zola, a powerful static site generator written in Rust
+
+">
+    <meta property="og:image"
+        content="https:&#x2F;&#x2F;yourblog.com/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https:&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;getting-started-with-zola&#x2F;">
+    <meta property="twitter:title" content="Your Professional Blog">
+    <meta property="twitter:description"
+        content="A modern, elegant blog showcasing technical expertise and insights">
+    <meta property="twitter:image"
+        content="https:&#x2F;&#x2F;yourblog.com/images/og-image.jpg">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2563eb">
+    <meta name="msapplication-TileColor" content="#2563eb">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- RSS Feed -->
+    
+    <link rel="alternate" type="application/rss+xml" title="Your Professional Blog" href="/rss.xml">
+    
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https:&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;getting-started-with-zola&#x2F;">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/main.css">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Analytics -->
+    
+
+    <!-- Google Site Verification -->
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "name": "Your Professional Blog",
+        "description": "A modern, elegant blog showcasing technical expertise and insights",
+        "url": "https:&#x2F;&#x2F;yourblog.com",
+        "author": {
+            "@type": "Person",
+            "name": "Your Name",
+            "email": "your.email@example.com"
+        }
+        ,
+"headline": "Getting Started with Zola: A Modern Static Site Generator",
+"datePublished": "2024-01-15",
+"dateModified": "2024-01-15",
+"author": {
+"@type": "Person",
+"name": "Your Name"
+},
+"publisher": {
+"@type": "Organization",
+"name": "Your Professional Blog",
+"url": "https:&#x2F;&#x2F;yourblog.com"
+},
+"mainEntityOfPage": {
+"@type": "WebPage",
+"@id": "https:&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;getting-started-with-zola&#x2F;"
+}
+    }
+    </script>
+
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    Your Professional Blog
+                </a>
+
+                <nav class="nav">
+                    
+                    <a href="https://yourblog.com" >
+                        Home
+                    </a>
+                    
+                    <a href="https://yourblog.com/blog" >
+                        Blog
+                    </a>
+                    
+                    <a href="https://yourblog.com/about" >
+                        About
+                    </a>
+                    
+                    <a href="https://yourblog.com/contact" >
+                        Contact
+                    </a>
+                    
+                </nav>
+
+                <div class="header-actions">
+                    
+                    <button class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+<div class="container">
+    <article class="blog-post" style="max-width: 800px; margin: 0 auto;">
+        <!-- Post Header -->
+        <header class="post-header"
+            style="text-align: center; padding: 2rem 0 3rem; border-bottom: 1px solid var(--color-border);">
+            
+
+            <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.2;">
+                Getting Started with Zola: A Modern Static Site Generator
+            </h1>
+
+            
+            <p
+                style="font-size: 1.25rem; color: var(--color-text-light); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Learn how to build fast, secure, and beautiful static websites using Zola, a powerful static site generator written in Rust
+            </p>
+            
+
+            <div class="post-meta"
+                style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; color: var(--color-text-muted); font-size: 0.875rem;">
+                <time datetime="2024-01-15">
+                    📅 January 15, 2024
+                </time>
+                
+                <span>⏱️ 2 min read</span>
+                
+                
+                <span>✍️ Your Name</span>
+                
+            </div>
+        </header>
+
+        <!-- Post Content -->
+        <div class="post-content" style="padding: 3rem 0; line-height: 1.8; font-size: 1.125rem;">
+            <p>Static site generators have revolutionized how we build and deploy websites. Among the many options available, <strong>Zola</strong> stands out as a particularly compelling choice for developers who value performance, simplicity, and modern tooling.</p>
+<h2 id="why-choose-zola">Why Choose Zola?</h2>
+<p>Zola is a static site generator written in Rust that compiles to a single binary with no dependencies. This means:</p>
+<ul>
+<li><strong>Zero Dependencies</strong>: No need to install Node.js, Ruby, or Python</li>
+<li><strong>Blazing Fast</strong>: Built with Rust for maximum performance</li>
+<li><strong>Built-in Features</strong>: Sass compilation, syntax highlighting, and search indexing</li>
+<li><strong>Simple Deployment</strong>: Single binary makes deployment trivial</li>
+</ul>
+<h2 id="key-features">Key Features</h2>
+<h3 id="1-performance-first">1. Performance First</h3>
+<p>Zola generates sites incredibly fast. Even large sites with hundreds of pages compile in seconds, not minutes.</p>
+<pre data-lang="bash" style="background-color:#2e3440;color:#d8dee9;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#616e88;"># Build your entire site
+</span><span style="color:#88c0d0;">zola</span><span> build
+</span><span>
+</span><span style="color:#616e88;"># Serve with live reload during development
+</span><span style="color:#88c0d0;">zola</span><span> serve
+</span></code></pre>
+<h3 id="2-modern-templating">2. Modern Templating</h3>
+<p>Zola uses the Tera templating engine, which provides powerful features like:</p>
+<ul>
+<li>Template inheritance</li>
+<li>Macros and filters</li>
+<li>Conditional logic</li>
+<li>Loop constructs</li>
+</ul>
+<pre data-lang="html" style="background-color:#2e3440;color:#d8dee9;" class="language-html "><code class="language-html" data-lang="html"><span style="color:#eceff4;">{%- raw -%}
+</span><span style="color:#eceff4;">{% extends &quot;base.html&quot; %}
+</span><span style="color:#eceff4;">
+</span><span style="color:#eceff4;">{% block content %}
+</span><span style="color:#81a1c1;">&lt;article </span><span style="color:#8fbcbb;">class</span><span style="color:#eceff4;">=</span><span style="color:#a3be8c;">&quot;post&quot;</span><span style="color:#81a1c1;">&gt;
+</span><span style="color:#eceff4;">    </span><span style="color:#81a1c1;">&lt;h1&gt;</span><span style="color:#eceff4;">{{ page.title }}</span><span style="color:#81a1c1;">&lt;/h1&gt;
+</span><span style="color:#eceff4;">    </span><span style="color:#81a1c1;">&lt;div </span><span style="color:#8fbcbb;">class</span><span style="color:#eceff4;">=</span><span style="color:#a3be8c;">&quot;content&quot;</span><span style="color:#81a1c1;">&gt;
+</span><span style="color:#eceff4;">        {{ page.content | safe }}
+</span><span style="color:#eceff4;">    </span><span style="color:#81a1c1;">&lt;/div&gt;
+</span><span style="color:#81a1c1;">&lt;/article&gt;
+</span><span style="color:#eceff4;">{% endblock content %}
+</span><span style="color:#eceff4;">{%- endraw -%}
+</span></code></pre>
+<h3 id="3-built-in-sass-support">3. Built-in Sass Support</h3>
+<p>No need for external build tools - Zola compiles Sass/SCSS out of the box:</p>
+<pre data-lang="scss" style="background-color:#2e3440;color:#d8dee9;" class="language-scss "><code class="language-scss" data-lang="scss"><span style="color:#616e88;">// sass/main.scss
+</span><span style="color:#81a1c1;">$</span><span>primary-color</span><span style="color:#eceff4;">: </span><span>#2563eb</span><span style="color:#eceff4;">;
+</span><span>
+</span><span style="color:#8fbcbb;">.header </span><span>{
+</span><span>    </span><span style="color:#8fbcbb;">background-color</span><span style="color:#eceff4;">: </span><span style="color:#81a1c1;">$</span><span>primary-color</span><span style="color:#eceff4;">;
+</span><span>    
+</span><span>    </span><span style="color:#8fbcbb;">.nav </span><span>{
+</span><span>        </span><span style="color:#8fbcbb;">display</span><span style="color:#eceff4;">: </span><span style="color:#8fbcbb;">flex</span><span style="color:#eceff4;">;
+</span><span>        </span><span style="color:#8fbcbb;">gap</span><span style="color:#eceff4;">: </span><span style="color:#b48ead;">1</span><span style="color:#81a1c1;">rem</span><span style="color:#eceff4;">;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="4-taxonomies-and-organization">4. Taxonomies and Organization</h3>
+<p>Organize your content with built-in support for categories and tags:</p>
+<pre data-lang="toml" style="background-color:#2e3440;color:#d8dee9;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#616e88;"># config.toml
+</span><span style="color:#81a1c1;">taxonomies </span><span>= [
+</span><span>    {</span><span style="color:#81a1c1;">name </span><span>= </span><span style="color:#a3be8c;">&quot;categories&quot;</span><span style="color:#eceff4;">, </span><span style="color:#81a1c1;">feed </span><span>= </span><span style="color:#81a1c1;">true</span><span>}</span><span style="color:#eceff4;">,
+</span><span>    {</span><span style="color:#81a1c1;">name </span><span>= </span><span style="color:#a3be8c;">&quot;tags&quot;</span><span style="color:#eceff4;">, </span><span style="color:#81a1c1;">feed </span><span>= </span><span style="color:#81a1c1;">true</span><span>}</span><span style="color:#eceff4;">,
+</span><span>]
+</span></code></pre>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="installation">Installation</h3>
+<p>The easiest way to install Zola is through package managers:</p>
+<pre data-lang="bash" style="background-color:#2e3440;color:#d8dee9;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#616e88;"># Windows (winget)
+</span><span style="color:#88c0d0;">winget</span><span> install getzola.zola
+</span><span>
+</span><span style="color:#616e88;"># macOS (Homebrew)
+</span><span style="color:#88c0d0;">brew</span><span> install zola
+</span><span>
+</span><span style="color:#616e88;"># Linux (most distributions)
+</span><span style="color:#616e88;"># Download from GitHub releases
+</span></code></pre>
+<h3 id="creating-your-first-site">Creating Your First Site</h3>
+<pre data-lang="bash" style="background-color:#2e3440;color:#d8dee9;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#616e88;"># Initialize a new site
+</span><span style="color:#88c0d0;">zola</span><span> init my-blog
+</span><span>
+</span><span style="color:#616e88;"># Navigate to the directory
+</span><span style="color:#88c0d0;">cd</span><span> my-blog
+</span><span>
+</span><span style="color:#616e88;"># Start the development server
+</span><span style="color:#88c0d0;">zola</span><span> serve
+</span></code></pre>
+<h3 id="project-structure">Project Structure</h3>
+<p>A typical Zola site has this structure:</p>
+<pre style="background-color:#2e3440;color:#d8dee9;"><code><span>my-blog/
+</span><span>├── config.toml          # Site configuration
+</span><span>├── content/             # Markdown content
+</span><span>│   ├── _index.md       # Homepage content
+</span><span>│   └── blog/           # Blog posts
+</span><span>├── templates/          # HTML templates
+</span><span>├── static/            # Static assets
+</span><span>├── sass/              # Sass/SCSS files
+</span><span>└── themes/            # Themes (optional)
+</span></code></pre>
+<h2 id="advanced-features">Advanced Features</h2>
+<h3 id="search-functionality">Search Functionality</h3>
+<p>Enable search with a simple configuration:</p>
+<pre data-lang="toml" style="background-color:#2e3440;color:#d8dee9;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#616e88;"># config.toml
+</span><span style="color:#81a1c1;">build_search_index </span><span>= </span><span style="color:#81a1c1;">true
+</span></code></pre>
+<p>Then implement search in JavaScript:</p>
+<pre data-lang="javascript" style="background-color:#2e3440;color:#d8dee9;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#616e88;">// Load search index
+</span><span style="color:#88c0d0;">fetch</span><span>(</span><span style="color:#a3be8c;">&#39;/search_index.en.json&#39;</span><span>)
+</span><span>    </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">then</span><span>(response </span><span style="color:#81a1c1;">=&gt; </span><span>response</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">json</span><span>())
+</span><span>    </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">then</span><span>(searchIndex </span><span style="color:#81a1c1;">=&gt; </span><span>{
+</span><span>        </span><span style="color:#616e88;">// Implement search logic
+</span><span>        </span><span style="color:#81a1c1;">const </span><span style="font-weight:bold;color:#d8dee9;">results </span><span style="color:#81a1c1;">= </span><span>searchIndex</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">filter</span><span>(item </span><span style="color:#81a1c1;">=&gt; 
+</span><span>            item</span><span style="color:#81a1c1;">.</span><span>title</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">toLowerCase</span><span>()</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">includes</span><span>(query</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">toLowerCase</span><span>())
+</span><span>        )</span><span style="color:#eceff4;">;
+</span><span>    })</span><span style="color:#eceff4;">;
+</span></code></pre>
+<h3 id="rss-feeds">RSS Feeds</h3>
+<p>Generate RSS feeds automatically:</p>
+<pre data-lang="toml" style="background-color:#2e3440;color:#d8dee9;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#616e88;"># config.toml
+</span><span style="color:#81a1c1;">generate_feed </span><span>= </span><span style="color:#81a1c1;">true
+</span><span style="color:#81a1c1;">feed_filename </span><span>= </span><span style="color:#a3be8c;">&quot;rss.xml&quot;
+</span></code></pre>
+<h3 id="syntax-highlighting">Syntax Highlighting</h3>
+<p>Built-in syntax highlighting for code blocks:</p>
+<pre data-lang="toml" style="background-color:#2e3440;color:#d8dee9;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#616e88;"># config.toml
+</span><span>[markdown]
+</span><span style="color:#81a1c1;">highlight_code </span><span>= </span><span style="color:#81a1c1;">true
+</span><span style="color:#81a1c1;">highlight_theme </span><span>= </span><span style="color:#a3be8c;">&quot;nord&quot;
+</span></code></pre>
+<h2 id="deployment-options">Deployment Options</h2>
+<p>Zola sites can be deployed anywhere static files are supported:</p>
+<h3 id="github-pages">GitHub Pages</h3>
+<pre data-lang="yaml" style="background-color:#2e3440;color:#d8dee9;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#616e88;"># .github/workflows/deploy.yml
+</span><span style="color:#8fbcbb;">name</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">Deploy to GitHub Pages
+</span><span>
+</span><span style="color:#81a1c1;">on</span><span style="color:#eceff4;">:
+</span><span>  </span><span style="color:#8fbcbb;">push</span><span style="color:#eceff4;">:
+</span><span>    </span><span style="color:#8fbcbb;">branches</span><span style="color:#eceff4;">: </span><span>[ </span><span style="color:#a3be8c;">main </span><span>]
+</span><span>
+</span><span style="color:#8fbcbb;">jobs</span><span style="color:#eceff4;">:
+</span><span>  </span><span style="color:#8fbcbb;">deploy</span><span style="color:#eceff4;">:
+</span><span>    </span><span style="color:#8fbcbb;">runs-on</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">ubuntu-latest
+</span><span>    </span><span style="color:#8fbcbb;">steps</span><span style="color:#eceff4;">:
+</span><span>    - </span><span style="color:#8fbcbb;">uses</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">actions/checkout@v2
+</span><span>    - </span><span style="color:#8fbcbb;">name</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">Setup Zola
+</span><span>      </span><span style="color:#8fbcbb;">uses</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">taiki-e/install-action@zola
+</span><span>    - </span><span style="color:#8fbcbb;">name</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">Build site
+</span><span>      </span><span style="color:#8fbcbb;">run</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">zola build
+</span><span>    - </span><span style="color:#8fbcbb;">name</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">Deploy to GitHub Pages
+</span><span>      </span><span style="color:#8fbcbb;">uses</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">peaceiris/actions-gh-pages@v3
+</span><span>      </span><span style="color:#8fbcbb;">with</span><span style="color:#eceff4;">:
+</span><span>        </span><span style="color:#8fbcbb;">github_token</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">${{ secrets.GITHUB_TOKEN }}
+</span><span>        </span><span style="color:#8fbcbb;">publish_dir</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">./public
+</span></code></pre>
+<h3 id="netlify">Netlify</h3>
+<p>Simply connect your Git repository and set:</p>
+<ul>
+<li>Build command: <code>zola build</code></li>
+<li>Publish directory: <code>public</code></li>
+</ul>
+<h3 id="vercel">Vercel</h3>
+<p>Create a <code>vercel.json</code> file:</p>
+<pre data-lang="json" style="background-color:#2e3440;color:#d8dee9;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  </span><span style="color:#a3be8c;">&quot;builds&quot;</span><span style="color:#eceff4;">: </span><span>[
+</span><span>    {
+</span><span>      </span><span style="color:#a3be8c;">&quot;src&quot;</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">&quot;config.toml&quot;</span><span style="color:#eceff4;">,
+</span><span>      </span><span style="color:#a3be8c;">&quot;use&quot;</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">&quot;@shuding/vercel-zola&quot;
+</span><span>    }
+</span><span>  ]
+</span><span>}
+</span></code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="1-organize-content-logically">1. Organize Content Logically</h3>
+<p>Use sections and taxonomies to organize content:</p>
+<pre style="background-color:#2e3440;color:#d8dee9;"><code><span>content/
+</span><span>├── blog/
+</span><span>│   ├── _index.md
+</span><span>│   ├── web-development/
+</span><span>│   └── rust-programming/
+</span><span>├── projects/
+</span><span>└── about.md
+</span></code></pre>
+<h3 id="2-optimize-images">2. Optimize Images</h3>
+<p>Use modern image formats and optimize for web:</p>
+<pre data-lang="markdown" style="background-color:#2e3440;color:#d8dee9;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#81a1c1;">![</span><span style="color:#88c0d0;">Optimized image</span><span style="color:#81a1c1;">]</span><span>(image.webp </span><span style="color:#a3be8c;">&quot;</span><span>Alt text</span><span style="color:#a3be8c;">&quot;</span><span>)
+</span></code></pre>
+<h3 id="3-leverage-shortcodes">3. Leverage Shortcodes</h3>
+<p>Create reusable components:</p>
+<pre data-lang="html" style="background-color:#2e3440;color:#d8dee9;" class="language-html "><code class="language-html" data-lang="html"><span style="color:#616e88;">&lt;!-- templates/shortcodes/note.html --&gt;
+</span><span style="color:#81a1c1;">&lt;div </span><span style="color:#8fbcbb;">class</span><span style="color:#eceff4;">=</span><span style="color:#a3be8c;">&quot;note note--{{ type | default(value=&quot;</span><span style="color:#8fbcbb;">info</span><span style="background-color:#bf616a;color:#d8dee9;">&quot;</span><span style="color:#8fbcbb;">) }}</span><span style="background-color:#bf616a;color:#d8dee9;">&quot;</span><span style="color:#81a1c1;">&gt;
+</span><span style="color:#eceff4;">    {{ body | markdown | safe }}
+</span><span style="color:#81a1c1;">&lt;/div&gt;
+</span></code></pre>
+<pre data-lang="markdown" style="background-color:#2e3440;color:#d8dee9;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#616e88;">&lt;!-- In your content --&gt;
+</span><span style="color:#616e88;">&lt;!-- Example shortcode usage would go here --&gt;
+</span></code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<p>Zola offers an excellent balance of simplicity and power for static site generation. Its Rust foundation provides exceptional performance, while its feature set covers everything needed for modern websites.</p>
+<p>Whether you’re building a personal blog, documentation site, or company website, Zola’s combination of speed, simplicity, and built-in features makes it an excellent choice for your next project.</p>
+<p>The single-binary distribution and zero dependencies make it particularly appealing for developers who want to focus on content and design rather than build tool configuration.</p>
+<hr />
+<p><em>Have you tried Zola for your projects? Share your experiences in the comments below!</em></p>
+
+        </div>
+
+        <!-- Post Footer -->
+        <footer class="post-footer" style="padding: 2rem 0; border-top: 1px solid var(--color-border);">
+            <!-- Tags -->
+            
+
+            <!-- Share Buttons -->
+            <div class="share-buttons" style="margin-bottom: 2rem;">
+                <h3 style="font-size: 1rem; margin-bottom: 1rem; color: var(--color-text);">Share this post:</h3>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="https://twitter.com/intent/tweet?text=Getting%20Started%20with%20Zola%3A%20A%20Modern%20Static%20Site%20Generator&url=https%3A&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;getting-started-with-zola&#x2F;"
+                        target="_blank" rel="noopener noreferrer"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background-color: #1da1f2; color: white; border-radius: var(--radius-md); text-decoration: none; font-size: 0.875rem;">
+                        🐦 Twitter
+                    </a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;getting-started-with-zola&#x2F;"
+                        target="_blank" rel="noopener noreferrer"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background-color: #0077b5; color: white; border-radius: var(--radius-md); text-decoration: none; font-size: 0.875rem;">
+                        💼 LinkedIn
+                    </a>
+                    <button onclick="copyToClipboard('https:&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;getting-started-with-zola&#x2F;')"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background-color: var(--color-bg-tertiary); color: var(--color-text); border: 1px solid var(--color-border); border-radius: var(--radius-md); cursor: pointer; font-size: 0.875rem;">
+                        🔗 Copy Link
+                    </button>
+                </div>
+            </div>
+
+            <!-- Author Bio -->
+            <div class="author-bio"
+                style="padding: 2rem; background-color: var(--color-bg-secondary); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+                <h3 style="margin-bottom: 1rem;">About the Author</h3>
+                <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                    <div
+                        style="flex-shrink: 0; width: 80px; height: 80px; background: linear-gradient(135deg, var(--color-primary), var(--color-accent)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white;">
+                        👤
+                    </div>
+                    <div style="flex: 1;">
+                        <h4 style="margin-bottom: 0.5rem;">Your Name</h4>
+                        <p style="color: var(--color-text-light); margin-bottom: 1rem;">
+                            Full-stack developer passionate about modern web technologies, Rust, and creating elegant solutions to complex problems.
+                        </p>
+                        
+                        <div class="social-links">
+                            
+                            <a href="https:&#x2F;&#x2F;github.com&#x2F;yourusername" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub">
+                                🐙
+                                
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;yourprofile" target="_blank" rel="noopener noreferrer"
+                                aria-label="LinkedIn">
+                                💼
+                                
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;yourusername" target="_blank" rel="noopener noreferrer"
+                                aria-label="Twitter">
+                                🐦
+                                
+                            </a>
+                            
+                            <a href="mailto:your.email@example.com" target="_blank" rel="noopener noreferrer"
+                                aria-label="Email">
+                                📧
+                                
+                            </a>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </article>
+
+    <!-- Navigation -->
+    <nav class="post-navigation" style="margin-top: 3rem; padding: 2rem 0; border-top: 1px solid var(--color-border);">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="/blog/" style="color: var(--color-primary); text-decoration: none; font-weight: 600;">
+                ← Back to Blog
+            </a>
+            <a href="#top" style="color: var(--color-primary); text-decoration: none; font-weight: 600;">
+                ↑ Back to Top
+            </a>
+        </div>
+    </nav>
+</div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <p>Full-stack developer passionate about modern web technologies, Rust, and creating elegant solutions to complex problems.</p>
+                    
+                    <div class="social-links">
+                        
+                        <a href="https:&#x2F;&#x2F;github.com&#x2F;yourusername" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub">
+                            🐙
+                            
+                        </a>
+                        
+                        <a href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;yourprofile" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn">
+                            💼
+                            
+                        </a>
+                        
+                        <a href="https:&#x2F;&#x2F;twitter.com&#x2F;yourusername" target="_blank" rel="noopener noreferrer"
+                            aria-label="Twitter">
+                            🐦
+                            
+                        </a>
+                        
+                        <a href="mailto:your.email@example.com" target="_blank" rel="noopener noreferrer"
+                            aria-label="Email">
+                            📧
+                            
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        
+                        <li><a href="https://yourblog.com">Home</a></li>
+                        
+                        <li><a href="https://yourblog.com/blog">Blog</a></li>
+                        
+                        <li><a href="https://yourblog.com/about">About</a></li>
+                        
+                        <li><a href="https://yourblog.com/contact">Contact</a></li>
+                        
+                        
+                        <li><a href="/rss.xml">RSS Feed</a></li>
+                        
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="/blog/">All Posts</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Built with ❤️ using Zola and modern web technologies</p>
+                <p>&copy; 2025 Your Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    
+<script>
+functio    Clipboard(text) {
+        navigator.c        oard.writeText(text).then(function () {
+        co nst b            event.target;
+            const original            utton.innerHTML;
+        butt            HTML = '✅ Copied!';
+            button.styl            oundColor = 'var(--color-primary                button.style.color = 'white';
+        
+        setT            ) => {
+            button.inneo            ext;
+            bu                ackgroundColor = 'var(--color-bg-                            button.style.color = 'var(--color - text)';
+
+        }).catch (function(err) {
+        cons            r('Could n        opy text: ', err);
+            'Could not copy link to clipboard');
+        });
+    }
+</script>
+
+</body>
+
+</html>

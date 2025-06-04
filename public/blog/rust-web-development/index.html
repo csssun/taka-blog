@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Building Web Applications with Rust: A Comprehensive Guide - Your Professional Blog</title>
+    <meta name="description" content="
+Discover how to build fast, safe, and scalable web applications using Rust and modern frameworks like Axum, Actix-web, and Warp
+
+">
+    <meta name="author" content="Your Name">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https:&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;rust-web-development&#x2F;">
+    <meta property="og:title" content="Building Web Applications with Rust: A Comprehensive Guide">
+    <meta property="og:description"
+        content="
+Discover how to build fast, safe, and scalable web applications using Rust and modern frameworks like Axum, Actix-web, and Warp
+
+">
+    <meta property="og:image"
+        content="https:&#x2F;&#x2F;yourblog.com/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https:&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;rust-web-development&#x2F;">
+    <meta property="twitter:title" content="Your Professional Blog">
+    <meta property="twitter:description"
+        content="A modern, elegant blog showcasing technical expertise and insights">
+    <meta property="twitter:image"
+        content="https:&#x2F;&#x2F;yourblog.com/images/og-image.jpg">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2563eb">
+    <meta name="msapplication-TileColor" content="#2563eb">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- RSS Feed -->
+    
+    <link rel="alternate" type="application/rss+xml" title="Your Professional Blog" href="/rss.xml">
+    
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https:&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;rust-web-development&#x2F;">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/main.css">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Analytics -->
+    
+
+    <!-- Google Site Verification -->
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "name": "Your Professional Blog",
+        "description": "A modern, elegant blog showcasing technical expertise and insights",
+        "url": "https:&#x2F;&#x2F;yourblog.com",
+        "author": {
+            "@type": "Person",
+            "name": "Your Name",
+            "email": "your.email@example.com"
+        }
+        ,
+"headline": "Building Web Applications with Rust: A Comprehensive Guide",
+"datePublished": "2024-01-05",
+"dateModified": "2024-01-05",
+"author": {
+"@type": "Person",
+"name": "Your Name"
+},
+"publisher": {
+"@type": "Organization",
+"name": "Your Professional Blog",
+"url": "https:&#x2F;&#x2F;yourblog.com"
+},
+"mainEntityOfPage": {
+"@type": "WebPage",
+"@id": "https:&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;rust-web-development&#x2F;"
+}
+    }
+    </script>
+
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    Your Professional Blog
+                </a>
+
+                <nav class="nav">
+                    
+                    <a href="https://yourblog.com" >
+                        Home
+                    </a>
+                    
+                    <a href="https://yourblog.com/blog" >
+                        Blog
+                    </a>
+                    
+                    <a href="https://yourblog.com/about" >
+                        About
+                    </a>
+                    
+                    <a href="https://yourblog.com/contact" >
+                        Contact
+                    </a>
+                    
+                </nav>
+
+                <div class="header-actions">
+                    
+                    <button class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+<div class="container">
+    <article class="blog-post" style="max-width: 800px; margin: 0 auto;">
+        <!-- Post Header -->
+        <header class="post-header"
+            style="text-align: center; padding: 2rem 0 3rem; border-bottom: 1px solid var(--color-border);">
+            
+
+            <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.2;">
+                Building Web Applications with Rust: A Comprehensive Guide
+            </h1>
+
+            
+            <p
+                style="font-size: 1.25rem; color: var(--color-text-light); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Discover how to build fast, safe, and scalable web applications using Rust and modern frameworks like Axum, Actix-web, and Warp
+            </p>
+            
+
+            <div class="post-meta"
+                style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; color: var(--color-text-muted); font-size: 0.875rem;">
+                <time datetime="2024-01-05">
+                    📅 January 05, 2024
+                </time>
+                
+                <span>⏱️ 2 min read</span>
+                
+                
+                <span>✍️ Your Name</span>
+                
+            </div>
+        </header>
+
+        <!-- Post Content -->
+        <div class="post-content" style="padding: 3rem 0; line-height: 1.8; font-size: 1.125rem;">
+            <p>Rust has emerged as a compelling choice for web development, offering memory safety, fearless concurrency, and exceptional performance. Let’s explore how to build modern web applications with Rust and why it’s becoming increasingly popular for backend development.</p>
+<h2 id="why-rust-for-web-development">Why Rust for Web Development?</h2>
+<h3 id="performance-and-safety">Performance and Safety</h3>
+<p>Rust combines the performance of C++ with the safety of higher-level languages:</p>
+<ul>
+<li><strong>Zero-cost abstractions</strong>: High-level features without runtime overhead</li>
+<li><strong>Memory safety</strong>: No null pointer dereferences or buffer overflows</li>
+<li><strong>Thread safety</strong>: Fearless concurrency without data races</li>
+<li><strong>Performance</strong>: Comparable to C and C++ in benchmarks</li>
+</ul>
+<h3 id="growing-ecosystem">Growing Ecosystem</h3>
+<p>The Rust web ecosystem has matured significantly:</p>
+<ul>
+<li><strong>Mature frameworks</strong>: Axum, Actix-web, Warp, Rocket</li>
+<li><strong>Database integration</strong>: SQLx, Diesel, SeaORM</li>
+<li><strong>Async runtime</strong>: Tokio for high-performance async I/O</li>
+<li><strong>Serialization</strong>: Serde for JSON/XML handling</li>
+</ul>
+<h2 id="popular-rust-web-frameworks">Popular Rust Web Frameworks</h2>
+<h3 id="1-axum-modern-and-ergonomic">1. Axum - Modern and Ergonomic</h3>
+<p>Axum is a modern web framework built on top of Hyper and Tower:</p>
+<pre data-lang="rust" style="background-color:#2e3440;color:#d8dee9;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#81a1c1;">use </span><span>axum</span><span style="color:#81a1c1;">::</span><span>{
+</span><span>    extract</span><span style="color:#81a1c1;">::</span><span>{Path</span><span style="color:#eceff4;">,</span><span> Query}</span><span style="color:#eceff4;">,
+</span><span>    http</span><span style="color:#81a1c1;">::</span><span>StatusCode</span><span style="color:#eceff4;">,
+</span><span>    response</span><span style="color:#81a1c1;">::</span><span>Json</span><span style="color:#eceff4;">,
+</span><span>    routing</span><span style="color:#81a1c1;">::</span><span>{get</span><span style="color:#eceff4;">,</span><span> post}</span><span style="color:#eceff4;">,
+</span><span>    Router</span><span style="color:#eceff4;">,
+</span><span>}</span><span style="color:#eceff4;">;
+</span><span style="color:#81a1c1;">use </span><span>serde</span><span style="color:#81a1c1;">::</span><span>{Deserialize</span><span style="color:#eceff4;">,</span><span> Serialize}</span><span style="color:#eceff4;">;
+</span><span style="color:#81a1c1;">use </span><span>std</span><span style="color:#81a1c1;">::</span><span>collections</span><span style="color:#81a1c1;">::</span><span>HashMap</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>#[derive(Serialize</span><span style="color:#eceff4;">,</span><span> Deserialize)]
+</span><span style="color:#81a1c1;">struct </span><span style="color:#8fbcbb;">User </span><span>{
+</span><span>    id</span><span style="color:#eceff4;">: </span><span style="color:#81a1c1;">u32</span><span>,
+</span><span>    name</span><span style="color:#eceff4;">:</span><span> String,
+</span><span>    email</span><span style="color:#eceff4;">:</span><span> String,
+</span><span>}
+</span><span>
+</span><span>#[derive(Deserialize)]
+</span><span style="color:#81a1c1;">struct </span><span style="color:#8fbcbb;">CreateUser </span><span>{
+</span><span>    name</span><span style="color:#eceff4;">:</span><span> String,
+</span><span>    email</span><span style="color:#eceff4;">:</span><span> String,
+</span><span>}
+</span><span>
+</span><span>async </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">get_user</span><span>(Path(id): Path&lt;</span><span style="color:#81a1c1;">u32</span><span>&gt;) </span><span style="color:#eceff4;">-&gt; </span><span style="color:#8fbcbb;">Result</span><span>&lt;Json&lt;User&gt;, StatusCode&gt; {
+</span><span>    </span><span style="color:#616e88;">// Simulate database lookup
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> user </span><span style="color:#81a1c1;">=</span><span> User {
+</span><span>        id</span><span style="color:#eceff4;">,
+</span><span>        name</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">&quot;John Doe&quot;</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">to_string</span><span>()</span><span style="color:#eceff4;">,
+</span><span>        email</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">&quot;john@example.com&quot;</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">to_string</span><span>()</span><span style="color:#eceff4;">,
+</span><span>    }</span><span style="color:#eceff4;">;
+</span><span>    
+</span><span>    </span><span style="color:#8fbcbb;">Ok</span><span>(Json(user))
+</span><span>}
+</span><span>
+</span><span>async </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">create_user</span><span>(Json(payload): Json&lt;CreateUser&gt;) </span><span style="color:#eceff4;">-&gt; </span><span style="color:#8fbcbb;">Result</span><span>&lt;Json&lt;User&gt;, StatusCode&gt; {
+</span><span>    </span><span style="color:#616e88;">// Simulate user creation
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> user </span><span style="color:#81a1c1;">=</span><span> User {
+</span><span>        id</span><span style="color:#eceff4;">: </span><span style="color:#b48ead;">1</span><span style="color:#eceff4;">,
+</span><span>        name</span><span style="color:#eceff4;">:</span><span> payload</span><span style="color:#81a1c1;">.</span><span>name</span><span style="color:#eceff4;">,
+</span><span>        email</span><span style="color:#eceff4;">:</span><span> payload</span><span style="color:#81a1c1;">.</span><span>email</span><span style="color:#eceff4;">,
+</span><span>    }</span><span style="color:#eceff4;">;
+</span><span>    
+</span><span>    </span><span style="color:#8fbcbb;">Ok</span><span>(Json(user))
+</span><span>}
+</span><span>
+</span><span>async </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">list_users</span><span>(Query(params): Query&lt;HashMap&lt;</span><span style="color:#8fbcbb;">String</span><span>, </span><span style="color:#8fbcbb;">String</span><span>&gt;&gt;) </span><span style="color:#eceff4;">-&gt; </span><span>Json&lt;</span><span style="color:#8fbcbb;">Vec</span><span>&lt;User&gt;&gt; {
+</span><span>    </span><span style="color:#616e88;">// Handle query parameters
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> limit </span><span style="color:#81a1c1;">=</span><span> params</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">get</span><span>(</span><span style="color:#a3be8c;">&quot;limit&quot;</span><span>)
+</span><span>        </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">and_then</span><span>(|l| l</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">parse</span><span>()</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">ok</span><span>())
+</span><span>        </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">unwrap_or</span><span>(</span><span style="color:#b48ead;">10</span><span>)</span><span style="color:#eceff4;">;
+</span><span>    
+</span><span>    </span><span style="color:#616e88;">// Simulate database query
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> users </span><span style="color:#81a1c1;">= </span><span>vec![
+</span><span>        User {
+</span><span>            id</span><span style="color:#eceff4;">: </span><span style="color:#b48ead;">1</span><span style="color:#eceff4;">,
+</span><span>            name</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">&quot;Alice&quot;</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">to_string</span><span>()</span><span style="color:#eceff4;">,
+</span><span>            email</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">&quot;alice@example.com&quot;</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">to_string</span><span>()</span><span style="color:#eceff4;">,
+</span><span>        }</span><span style="color:#eceff4;">,
+</span><span>        User {
+</span><span>            id</span><span style="color:#eceff4;">: </span><span style="color:#b48ead;">2</span><span style="color:#eceff4;">,
+</span><span>            name</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">&quot;Bob&quot;</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">to_string</span><span>()</span><span style="color:#eceff4;">,
+</span><span>            email</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">&quot;bob@example.com&quot;</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">to_string</span><span>()</span><span style="color:#eceff4;">,
+</span><span>        }</span><span style="color:#eceff4;">,
+</span><span>    ]</span><span style="color:#eceff4;">;
+</span><span>    
+</span><span>    Json(users</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">into_iter</span><span>()</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">take</span><span>(limit)</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">collect</span><span>())
+</span><span>}
+</span><span>
+</span><span>#[tokio::main]
+</span><span>async </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">main</span><span>() {
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> app </span><span style="color:#81a1c1;">= </span><span>Router</span><span style="color:#81a1c1;">::</span><span>new()
+</span><span>        </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">route</span><span>(</span><span style="color:#a3be8c;">&quot;/users&quot;</span><span style="color:#eceff4;">, </span><span style="color:#88c0d0;">get</span><span>(list_users)</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">post</span><span>(create_user))
+</span><span>        </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">route</span><span>(</span><span style="color:#a3be8c;">&quot;/users/:id&quot;</span><span style="color:#eceff4;">, </span><span style="color:#88c0d0;">get</span><span>(get_user))</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> listener </span><span style="color:#81a1c1;">= </span><span>tokio</span><span style="color:#81a1c1;">::</span><span>net</span><span style="color:#81a1c1;">::</span><span>TcpListener</span><span style="color:#81a1c1;">::</span><span>bind(</span><span style="color:#a3be8c;">&quot;0.0.0.0:3000&quot;</span><span>)
+</span><span>        </span><span style="color:#81a1c1;">.</span><span>await
+</span><span>        </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">unwrap</span><span>()</span><span style="color:#eceff4;">;
+</span><span>        
+</span><span>    println!(</span><span style="color:#a3be8c;">&quot;Server running on http://localhost:3000&quot;</span><span>)</span><span style="color:#eceff4;">;
+</span><span>    axum</span><span style="color:#81a1c1;">::</span><span>serve(listener</span><span style="color:#eceff4;">,</span><span> app)</span><span style="color:#81a1c1;">.</span><span>await</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">unwrap</span><span>()</span><span style="color:#eceff4;">;
+</span><span>}
+</span></code></pre>
+<h3 id="2-actix-web-high-performance">2. Actix-web - High Performance</h3>
+<p>Actix-web is known for its exceptional performance:</p>
+<pre data-lang="rust" style="background-color:#2e3440;color:#d8dee9;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#81a1c1;">use </span><span>actix_web</span><span style="color:#81a1c1;">::</span><span>{web</span><span style="color:#eceff4;">,</span><span> App</span><span style="color:#eceff4;">,</span><span> HttpResponse</span><span style="color:#eceff4;">,</span><span> HttpServer</span><span style="color:#eceff4;">, </span><span style="color:#8fbcbb;">Result</span><span>}</span><span style="color:#eceff4;">;
+</span><span style="color:#81a1c1;">use </span><span>serde</span><span style="color:#81a1c1;">::</span><span>{Deserialize</span><span style="color:#eceff4;">,</span><span> Serialize}</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>#[derive(Serialize</span><span style="color:#eceff4;">,</span><span> Deserialize)]
+</span><span style="color:#81a1c1;">struct </span><span style="color:#8fbcbb;">User </span><span>{
+</span><span>    id</span><span style="color:#eceff4;">: </span><span style="color:#81a1c1;">u32</span><span>,
+</span><span>    name</span><span style="color:#eceff4;">:</span><span> String,
+</span><span>    email</span><span style="color:#eceff4;">:</span><span> String,
+</span><span>}
+</span><span>
+</span><span>async </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">get_user</span><span>(path</span><span style="color:#eceff4;">: </span><span>web</span><span style="color:#81a1c1;">::</span><span>Path&lt;</span><span style="color:#81a1c1;">u32</span><span>&gt;) </span><span style="color:#eceff4;">-&gt; </span><span style="color:#8fbcbb;">Result</span><span>&lt;HttpResponse&gt; {
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> user_id </span><span style="color:#81a1c1;">=</span><span> path</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">into_inner</span><span>()</span><span style="color:#eceff4;">;
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> user </span><span style="color:#81a1c1;">=</span><span> User {
+</span><span>        id</span><span style="color:#eceff4;">:</span><span> user_id</span><span style="color:#eceff4;">,
+</span><span>        name</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">&quot;John Doe&quot;</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">to_string</span><span>()</span><span style="color:#eceff4;">,
+</span><span>        email</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">&quot;john@example.com&quot;</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">to_string</span><span>()</span><span style="color:#eceff4;">,
+</span><span>    }</span><span style="color:#eceff4;">;
+</span><span>    
+</span><span>    </span><span style="color:#8fbcbb;">Ok</span><span>(HttpResponse</span><span style="color:#81a1c1;">::</span><span>Ok()</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">json</span><span>(user))
+</span><span>}
+</span><span>
+</span><span>async </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">create_user</span><span>(user</span><span style="color:#eceff4;">: </span><span>web</span><span style="color:#81a1c1;">::</span><span>Json&lt;User&gt;) </span><span style="color:#eceff4;">-&gt; </span><span style="color:#8fbcbb;">Result</span><span>&lt;HttpResponse&gt; {
+</span><span>    println!(</span><span style="color:#a3be8c;">&quot;Creating user: </span><span style="color:#ebcb8b;">{:?}</span><span style="color:#a3be8c;">&quot;</span><span style="color:#eceff4;">,</span><span> user)</span><span style="color:#eceff4;">;
+</span><span>    </span><span style="color:#8fbcbb;">Ok</span><span>(HttpResponse</span><span style="color:#81a1c1;">::</span><span>Created()</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">json</span><span>(</span><span style="color:#81a1c1;">&amp;*</span><span>user))
+</span><span>}
+</span><span>
+</span><span>#[actix_web::main]
+</span><span>async </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">main</span><span>() </span><span style="color:#eceff4;">-&gt; </span><span>std</span><span style="color:#81a1c1;">::</span><span>io</span><span style="color:#81a1c1;">::</span><span style="color:#8fbcbb;">Result</span><span>&lt;()&gt; {
+</span><span>    HttpServer</span><span style="color:#81a1c1;">::</span><span>new(|| {
+</span><span>        App</span><span style="color:#81a1c1;">::</span><span>new()
+</span><span>            </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">route</span><span>(</span><span style="color:#a3be8c;">&quot;/users/{id}&quot;</span><span style="color:#eceff4;">, </span><span>web</span><span style="color:#81a1c1;">::</span><span>get()</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">to</span><span>(get_user))
+</span><span>            </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">route</span><span>(</span><span style="color:#a3be8c;">&quot;/users&quot;</span><span style="color:#eceff4;">, </span><span>web</span><span style="color:#81a1c1;">::</span><span>post()</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">to</span><span>(create_user))
+</span><span>    })
+</span><span>    </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">bind</span><span>(</span><span style="color:#a3be8c;">&quot;127.0.0.1:8080&quot;</span><span>)</span><span style="color:#81a1c1;">?
+</span><span>    </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">run</span><span>()
+</span><span>    </span><span style="color:#81a1c1;">.</span><span>await
+</span><span>}
+</span></code></pre>
+<h2 id="database-integration">Database Integration</h2>
+<h3 id="using-sqlx-for-type-safe-database-queries">Using SQLx for Type-Safe Database Queries</h3>
+<p>SQLx provides compile-time checked SQL queries:</p>
+<pre data-lang="rust" style="background-color:#2e3440;color:#d8dee9;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#81a1c1;">use </span><span>sqlx</span><span style="color:#81a1c1;">::</span><span>{PgPool</span><span style="color:#eceff4;">,</span><span> Row}</span><span style="color:#eceff4;">;
+</span><span style="color:#81a1c1;">use </span><span>serde</span><span style="color:#81a1c1;">::</span><span>{Deserialize</span><span style="color:#eceff4;">,</span><span> Serialize}</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>#[derive(Serialize</span><span style="color:#eceff4;">,</span><span> Deserialize</span><span style="color:#eceff4;">,</span><span> sqlx::FromRow)]
+</span><span style="color:#81a1c1;">struct </span><span style="color:#8fbcbb;">User </span><span>{
+</span><span>    id</span><span style="color:#eceff4;">: </span><span style="color:#81a1c1;">i32</span><span>,
+</span><span>    name</span><span style="color:#eceff4;">:</span><span> String,
+</span><span>    email</span><span style="color:#eceff4;">:</span><span> String,
+</span><span>    created_at</span><span style="color:#eceff4;">: </span><span>chrono</span><span style="color:#81a1c1;">::</span><span>DateTime&lt;chrono</span><span style="color:#81a1c1;">::</span><span>Utc&gt;,
+</span><span>}
+</span><span>
+</span><span>#[derive(Deserialize)]
+</span><span style="color:#81a1c1;">struct </span><span style="color:#8fbcbb;">CreateUser </span><span>{
+</span><span>    name</span><span style="color:#eceff4;">:</span><span> String,
+</span><span>    email</span><span style="color:#eceff4;">:</span><span> String,
+</span><span>}
+</span><span>
+</span><span>async </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">create_user</span><span>(pool</span><span style="color:#eceff4;">: </span><span style="color:#81a1c1;">&amp;</span><span>PgPool, user_data</span><span style="color:#eceff4;">:</span><span> CreateUser) </span><span style="color:#eceff4;">-&gt; </span><span style="color:#8fbcbb;">Result</span><span>&lt;User, sqlx</span><span style="color:#81a1c1;">::</span><span>Error&gt; {
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> user </span><span style="color:#81a1c1;">= </span><span>sqlx</span><span style="color:#81a1c1;">::</span><span>query_as</span><span style="color:#81a1c1;">!</span><span>(
+</span><span>        User</span><span style="color:#eceff4;">,
+</span><span>        </span><span style="color:#81a1c1;">r</span><span style="color:#a3be8c;">#&quot;
+</span><span style="color:#a3be8c;">        INSERT INTO users (name, email)
+</span><span style="color:#a3be8c;">        VALUES ($1, $2)
+</span><span style="color:#a3be8c;">        RETURNING id, name, email, created_at
+</span><span style="color:#a3be8c;">        &quot;#</span><span style="color:#eceff4;">,
+</span><span>        user_data</span><span style="color:#81a1c1;">.</span><span>name</span><span style="color:#eceff4;">,
+</span><span>        user_data</span><span style="color:#81a1c1;">.</span><span>email
+</span><span>    )
+</span><span>    </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">fetch_one</span><span>(pool)
+</span><span>    </span><span style="color:#81a1c1;">.</span><span>await</span><span style="color:#81a1c1;">?</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>    </span><span style="color:#8fbcbb;">Ok</span><span>(user)
+</span><span>}
+</span><span>
+</span><span>async </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">get_user_by_id</span><span>(pool</span><span style="color:#eceff4;">: </span><span style="color:#81a1c1;">&amp;</span><span>PgPool, user_id</span><span style="color:#eceff4;">: </span><span style="color:#81a1c1;">i32</span><span>) </span><span style="color:#eceff4;">-&gt; </span><span style="color:#8fbcbb;">Result</span><span>&lt;</span><span style="color:#8fbcbb;">Option</span><span>&lt;User&gt;, sqlx</span><span style="color:#81a1c1;">::</span><span>Error&gt; {
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> user </span><span style="color:#81a1c1;">= </span><span>sqlx</span><span style="color:#81a1c1;">::</span><span>query_as</span><span style="color:#81a1c1;">!</span><span>(
+</span><span>        User</span><span style="color:#eceff4;">,
+</span><span>        </span><span style="color:#a3be8c;">&quot;SELECT id, name, email, created_at FROM users WHERE id = $1&quot;</span><span style="color:#eceff4;">,
+</span><span>        user_id
+</span><span>    )
+</span><span>    </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">fetch_optional</span><span>(pool)
+</span><span>    </span><span style="color:#81a1c1;">.</span><span>await</span><span style="color:#81a1c1;">?</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>    </span><span style="color:#8fbcbb;">Ok</span><span>(user)
+</span><span>}
+</span><span>
+</span><span>async </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">list_users</span><span>(pool</span><span style="color:#eceff4;">: </span><span style="color:#81a1c1;">&amp;</span><span>PgPool, limit</span><span style="color:#eceff4;">: </span><span style="color:#81a1c1;">i64</span><span>, offset</span><span style="color:#eceff4;">: </span><span style="color:#81a1c1;">i64</span><span>) </span><span style="color:#eceff4;">-&gt; </span><span style="color:#8fbcbb;">Result</span><span>&lt;</span><span style="color:#8fbcbb;">Vec</span><span>&lt;User&gt;, sqlx</span><span style="color:#81a1c1;">::</span><span>Error&gt; {
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> users </span><span style="color:#81a1c1;">= </span><span>sqlx</span><span style="color:#81a1c1;">::</span><span>query_as</span><span style="color:#81a1c1;">!</span><span>(
+</span><span>        User</span><span style="color:#eceff4;">,
+</span><span>        </span><span style="color:#a3be8c;">&quot;SELECT id, name, email, created_at FROM users ORDER BY created_at DESC LIMIT $1 OFFSET $2&quot;</span><span style="color:#eceff4;">,
+</span><span>        limit</span><span style="color:#eceff4;">,
+</span><span>        offset
+</span><span>    )
+</span><span>    </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">fetch_all</span><span>(pool)
+</span><span>    </span><span style="color:#81a1c1;">.</span><span>await</span><span style="color:#81a1c1;">?</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>    </span><span style="color:#8fbcbb;">Ok</span><span>(users)
+</span><span>}
+</span></code></pre>
+<h3 id="database-connection-and-migration">Database Connection and Migration</h3>
+<pre data-lang="rust" style="background-color:#2e3440;color:#d8dee9;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#81a1c1;">use </span><span>sqlx</span><span style="color:#81a1c1;">::</span><span>postgres</span><span style="color:#81a1c1;">::</span><span>PgPoolOptions</span><span style="color:#eceff4;">;
+</span><span style="color:#81a1c1;">use </span><span>std</span><span style="color:#81a1c1;">::</span><span>env</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>async </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">setup_database</span><span>() </span><span style="color:#eceff4;">-&gt; </span><span style="color:#8fbcbb;">Result</span><span>&lt;PgPool, sqlx</span><span style="color:#81a1c1;">::</span><span>Error&gt; {
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> database_url </span><span style="color:#81a1c1;">= </span><span>env</span><span style="color:#81a1c1;">::</span><span>var(</span><span style="color:#a3be8c;">&quot;DATABASE_URL&quot;</span><span>)
+</span><span>        </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">expect</span><span>(</span><span style="color:#a3be8c;">&quot;DATABASE_URL must be set&quot;</span><span>)</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> pool </span><span style="color:#81a1c1;">= </span><span>PgPoolOptions</span><span style="color:#81a1c1;">::</span><span>new()
+</span><span>        </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">max_connections</span><span>(</span><span style="color:#b48ead;">5</span><span>)
+</span><span>        </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">connect</span><span>(</span><span style="color:#81a1c1;">&amp;</span><span>database_url)
+</span><span>        </span><span style="color:#81a1c1;">.</span><span>await</span><span style="color:#81a1c1;">?</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>    </span><span style="color:#616e88;">// Run migrations
+</span><span>    sqlx</span><span style="color:#81a1c1;">::</span><span>migrate</span><span style="color:#81a1c1;">!</span><span>(</span><span style="color:#a3be8c;">&quot;./migrations&quot;</span><span>)</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">run</span><span>(</span><span style="color:#81a1c1;">&amp;</span><span>pool)</span><span style="color:#81a1c1;">.</span><span>await</span><span style="color:#81a1c1;">?</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>    </span><span style="color:#8fbcbb;">Ok</span><span>(pool)
+</span><span>}
+</span></code></pre>
+<h2 id="authentication-and-authorization">Authentication and Authorization</h2>
+<h3 id="jwt-authentication-with-axum">JWT Authentication with Axum</h3>
+<pre data-lang="rust" style="background-color:#2e3440;color:#d8dee9;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#81a1c1;">use </span><span>axum</span><span style="color:#81a1c1;">::</span><span>{
+</span><span>    extract</span><span style="color:#81a1c1;">::</span><span>{Request</span><span style="color:#eceff4;">,</span><span> State}</span><span style="color:#eceff4;">,
+</span><span>    http</span><span style="color:#81a1c1;">::</span><span>{header</span><span style="color:#81a1c1;">::</span><span>AUTHORIZATION</span><span style="color:#eceff4;">,</span><span> StatusCode}</span><span style="color:#eceff4;">,
+</span><span>    middleware</span><span style="color:#81a1c1;">::</span><span>Next</span><span style="color:#eceff4;">,
+</span><span>    response</span><span style="color:#81a1c1;">::</span><span>Response</span><span style="color:#eceff4;">,
+</span><span>}</span><span style="color:#eceff4;">;
+</span><span style="color:#81a1c1;">use </span><span>jsonwebtoken</span><span style="color:#81a1c1;">::</span><span>{decode</span><span style="color:#eceff4;">,</span><span> encode</span><span style="color:#eceff4;">,</span><span> DecodingKey</span><span style="color:#eceff4;">,</span><span> EncodingKey</span><span style="color:#eceff4;">,</span><span> Header</span><span style="color:#eceff4;">,</span><span> Validation}</span><span style="color:#eceff4;">;
+</span><span style="color:#81a1c1;">use </span><span>serde</span><span style="color:#81a1c1;">::</span><span>{Deserialize</span><span style="color:#eceff4;">,</span><span> Serialize}</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>#[derive(Debug</span><span style="color:#eceff4;">,</span><span> Serialize</span><span style="color:#eceff4;">,</span><span> Deserialize)]
+</span><span style="color:#81a1c1;">struct </span><span style="color:#8fbcbb;">Claims </span><span>{
+</span><span>    sub</span><span style="color:#eceff4;">:</span><span> String,
+</span><span>    exp</span><span style="color:#eceff4;">: </span><span style="color:#81a1c1;">usize</span><span>,
+</span><span>}
+</span><span>
+</span><span>#[derive(Clone)]
+</span><span style="color:#81a1c1;">struct </span><span style="color:#8fbcbb;">AppState </span><span>{
+</span><span>    jwt_secret</span><span style="color:#eceff4;">:</span><span> String,
+</span><span>}
+</span><span>
+</span><span>async </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">auth_middleware</span><span>(
+</span><span>    State(state): State&lt;AppState&gt;,
+</span><span>    </span><span style="color:#81a1c1;">mut </span><span>request</span><span style="color:#eceff4;">:</span><span> Request,
+</span><span>    next</span><span style="color:#eceff4;">:</span><span> Next,
+</span><span>) </span><span style="color:#eceff4;">-&gt; </span><span style="color:#8fbcbb;">Result</span><span>&lt;Response, StatusCode&gt; {
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> auth_header </span><span style="color:#81a1c1;">=</span><span> request
+</span><span>        </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">headers</span><span>()
+</span><span>        </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">get</span><span>(AUTHORIZATION)
+</span><span>        </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">and_then</span><span>(|header| header</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">to_str</span><span>()</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">ok</span><span>())
+</span><span>        </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">ok_or</span><span>(StatusCode</span><span style="color:#81a1c1;">::</span><span>UNAUTHORIZED)</span><span style="color:#81a1c1;">?</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>    </span><span style="color:#81a1c1;">if !</span><span>auth_header</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">starts_with</span><span>(</span><span style="color:#a3be8c;">&quot;Bearer &quot;</span><span>) {
+</span><span>        </span><span style="color:#81a1c1;">return </span><span style="color:#8fbcbb;">Err</span><span>(StatusCode</span><span style="color:#81a1c1;">::</span><span>UNAUTHORIZED)</span><span style="color:#eceff4;">;
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> token </span><span style="color:#81a1c1;">= &amp;</span><span>auth_header[</span><span style="color:#b48ead;">7</span><span style="color:#81a1c1;">..</span><span>]</span><span style="color:#eceff4;">;
+</span><span>    
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> claims </span><span style="color:#81a1c1;">= </span><span>decode</span><span style="color:#81a1c1;">::</span><span>&lt;Claims&gt;(
+</span><span>        token</span><span style="color:#eceff4;">,
+</span><span>        </span><span style="color:#81a1c1;">&amp;</span><span>DecodingKey</span><span style="color:#81a1c1;">::</span><span>from_secret(state</span><span style="color:#81a1c1;">.</span><span>jwt_secret</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">as_ref</span><span>())</span><span style="color:#eceff4;">,
+</span><span>        </span><span style="color:#81a1c1;">&amp;</span><span>Validation</span><span style="color:#81a1c1;">::</span><span>default()</span><span style="color:#eceff4;">,
+</span><span>    )
+</span><span>    </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">map_err</span><span>(|_| StatusCode</span><span style="color:#81a1c1;">::</span><span>UNAUTHORIZED)</span><span style="color:#81a1c1;">?</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>    </span><span style="color:#616e88;">// Add user info to request extensions
+</span><span>    request</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">extensions_mut</span><span>()</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">insert</span><span>(claims</span><span style="color:#81a1c1;">.</span><span>claims)</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>    </span><span style="color:#8fbcbb;">Ok</span><span>(next</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">run</span><span>(request)</span><span style="color:#81a1c1;">.</span><span>await)
+</span><span>}
+</span><span>
+</span><span>async </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">login</span><span>(State(state): State&lt;AppState&gt;) </span><span style="color:#eceff4;">-&gt; </span><span style="color:#8fbcbb;">Result</span><span>&lt;</span><span style="color:#8fbcbb;">String</span><span>, StatusCode&gt; {
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> claims </span><span style="color:#81a1c1;">=</span><span> Claims {
+</span><span>        sub</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">&quot;user123&quot;</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">to_string</span><span>()</span><span style="color:#eceff4;">,
+</span><span>        exp</span><span style="color:#eceff4;">: </span><span>(chrono</span><span style="color:#81a1c1;">::</span><span>Utc</span><span style="color:#81a1c1;">::</span><span>now() </span><span style="color:#81a1c1;">+ </span><span>chrono</span><span style="color:#81a1c1;">::</span><span>Duration</span><span style="color:#81a1c1;">::</span><span>hours(</span><span style="color:#b48ead;">24</span><span>))</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">timestamp</span><span>() </span><span style="color:#81a1c1;">as usize</span><span style="color:#eceff4;">,
+</span><span>    }</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> token </span><span style="color:#81a1c1;">= </span><span style="color:#88c0d0;">encode</span><span>(
+</span><span>        </span><span style="color:#81a1c1;">&amp;</span><span>Header</span><span style="color:#81a1c1;">::</span><span>default()</span><span style="color:#eceff4;">,
+</span><span>        </span><span style="color:#81a1c1;">&amp;</span><span>claims</span><span style="color:#eceff4;">,
+</span><span>        </span><span style="color:#81a1c1;">&amp;</span><span>EncodingKey</span><span style="color:#81a1c1;">::</span><span>from_secret(state</span><span style="color:#81a1c1;">.</span><span>jwt_secret</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">as_ref</span><span>())</span><span style="color:#eceff4;">,
+</span><span>    )
+</span><span>    </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">map_err</span><span>(|_| StatusCode</span><span style="color:#81a1c1;">::</span><span>INTERNAL_SERVER_ERROR)</span><span style="color:#81a1c1;">?</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>    </span><span style="color:#8fbcbb;">Ok</span><span>(token)
+</span><span>}
+</span></code></pre>
+<h2 id="error-handling">Error Handling</h2>
+<h3 id="custom-error-types">Custom Error Types</h3>
+<pre data-lang="rust" style="background-color:#2e3440;color:#d8dee9;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#81a1c1;">use </span><span>axum</span><span style="color:#81a1c1;">::</span><span>{
+</span><span>    http</span><span style="color:#81a1c1;">::</span><span>StatusCode</span><span style="color:#eceff4;">,
+</span><span>    response</span><span style="color:#81a1c1;">::</span><span>{IntoResponse</span><span style="color:#eceff4;">,</span><span> Response}</span><span style="color:#eceff4;">,
+</span><span>    Json</span><span style="color:#eceff4;">,
+</span><span>}</span><span style="color:#eceff4;">;
+</span><span style="color:#81a1c1;">use </span><span>serde_json</span><span style="color:#81a1c1;">::</span><span>json</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>#[derive(Debug)]
+</span><span style="color:#81a1c1;">enum </span><span style="color:#8fbcbb;">AppError </span><span>{
+</span><span>    Database(sqlx</span><span style="color:#81a1c1;">::</span><span>Error)</span><span style="color:#eceff4;">,
+</span><span>    NotFound</span><span style="color:#eceff4;">,
+</span><span>    Validation(</span><span style="color:#8fbcbb;">String</span><span>)</span><span style="color:#eceff4;">,
+</span><span>    Unauthorized</span><span style="color:#eceff4;">,
+</span><span>}
+</span><span>
+</span><span style="color:#81a1c1;">impl </span><span>IntoResponse </span><span style="color:#81a1c1;">for </span><span>AppError {
+</span><span>    </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">into_response</span><span>(self) </span><span style="color:#eceff4;">-&gt;</span><span> Response {
+</span><span>        </span><span style="color:#81a1c1;">let </span><span>(status</span><span style="color:#eceff4;">,</span><span> error_message) </span><span style="color:#81a1c1;">= match self </span><span>{
+</span><span>            AppError</span><span style="color:#81a1c1;">::</span><span>Database(err) </span><span style="color:#81a1c1;">=&gt; </span><span>{
+</span><span>                eprintln!(</span><span style="color:#a3be8c;">&quot;Database error: </span><span style="color:#ebcb8b;">{}</span><span style="color:#a3be8c;">&quot;</span><span style="color:#eceff4;">,</span><span> err)</span><span style="color:#eceff4;">;
+</span><span>                (StatusCode</span><span style="color:#81a1c1;">::</span><span>INTERNAL_SERVER_ERROR</span><span style="color:#eceff4;">, </span><span style="color:#a3be8c;">&quot;Internal server error&quot;</span><span>)
+</span><span>            }
+</span><span>            AppError</span><span style="color:#81a1c1;">::</span><span>NotFound </span><span style="color:#81a1c1;">=&gt; </span><span>(StatusCode</span><span style="color:#81a1c1;">::</span><span>NOT_FOUND</span><span style="color:#eceff4;">, </span><span style="color:#a3be8c;">&quot;Resource not found&quot;</span><span>)</span><span style="color:#eceff4;">,
+</span><span>            AppError</span><span style="color:#81a1c1;">::</span><span>Validation(msg) </span><span style="color:#81a1c1;">=&gt; </span><span>(StatusCode</span><span style="color:#81a1c1;">::</span><span>BAD_REQUEST</span><span style="color:#eceff4;">,</span><span> msg</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">as_str</span><span>())</span><span style="color:#eceff4;">,
+</span><span>            AppError</span><span style="color:#81a1c1;">::</span><span>Unauthorized </span><span style="color:#81a1c1;">=&gt; </span><span>(StatusCode</span><span style="color:#81a1c1;">::</span><span>UNAUTHORIZED</span><span style="color:#eceff4;">, </span><span style="color:#a3be8c;">&quot;Unauthorized&quot;</span><span>)</span><span style="color:#eceff4;">,
+</span><span>        }</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>        </span><span style="color:#81a1c1;">let</span><span> body </span><span style="color:#81a1c1;">=</span><span> Json(json!({
+</span><span>            </span><span style="color:#a3be8c;">&quot;error&quot;</span><span style="color:#eceff4;">:</span><span> error_message</span><span style="color:#eceff4;">,
+</span><span>        }))</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>        (status</span><span style="color:#eceff4;">,</span><span> body)</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">into_response</span><span>()
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#81a1c1;">impl </span><span style="color:#8fbcbb;">From</span><span>&lt;sqlx</span><span style="color:#81a1c1;">::</span><span>Error&gt; </span><span style="color:#81a1c1;">for </span><span>AppError {
+</span><span>    </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">from</span><span>(err</span><span style="color:#eceff4;">: </span><span>sqlx</span><span style="color:#81a1c1;">::</span><span>Error) </span><span style="color:#eceff4;">-&gt; </span><span style="color:#81a1c1;">Self </span><span>{
+</span><span>        AppError</span><span style="color:#81a1c1;">::</span><span>Database(err)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#616e88;">// Usage in handlers
+</span><span>async </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">get_user</span><span>(Path(id): Path&lt;</span><span style="color:#81a1c1;">i32</span><span>&gt;, State(pool): State&lt;PgPool&gt;) </span><span style="color:#eceff4;">-&gt; </span><span style="color:#8fbcbb;">Result</span><span>&lt;Json&lt;User&gt;, AppError&gt; {
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> user </span><span style="color:#81a1c1;">= </span><span style="color:#88c0d0;">get_user_by_id</span><span>(</span><span style="color:#81a1c1;">&amp;</span><span>pool</span><span style="color:#eceff4;">,</span><span> id)
+</span><span>        </span><span style="color:#81a1c1;">.</span><span>await</span><span style="color:#81a1c1;">?
+</span><span>        </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">ok_or</span><span>(AppError</span><span style="color:#81a1c1;">::</span><span>NotFound)</span><span style="color:#81a1c1;">?</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>    </span><span style="color:#8fbcbb;">Ok</span><span>(Json(user))
+</span><span>}
+</span></code></pre>
+<h2 id="testing">Testing</h2>
+<h3 id="unit-and-integration-tests">Unit and Integration Tests</h3>
+<pre data-lang="rust" style="background-color:#2e3440;color:#d8dee9;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[cfg(test)]
+</span><span style="color:#81a1c1;">mod </span><span>tests {
+</span><span>    </span><span style="color:#81a1c1;">use super::*</span><span style="color:#eceff4;">;
+</span><span>    </span><span style="color:#81a1c1;">use </span><span>axum</span><span style="color:#81a1c1;">::</span><span>{
+</span><span>        body</span><span style="color:#81a1c1;">::</span><span>Body</span><span style="color:#eceff4;">,
+</span><span>        http</span><span style="color:#81a1c1;">::</span><span>{Request</span><span style="color:#eceff4;">,</span><span> StatusCode}</span><span style="color:#eceff4;">,
+</span><span>    }</span><span style="color:#eceff4;">;
+</span><span>    </span><span style="color:#81a1c1;">use </span><span>tower</span><span style="color:#81a1c1;">::</span><span>ServiceExt</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>    #[tokio::test]
+</span><span>    async </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">test_get_user</span><span>() {
+</span><span>        </span><span style="color:#81a1c1;">let</span><span> app </span><span style="color:#81a1c1;">= </span><span style="color:#88c0d0;">create_app</span><span>()</span><span style="color:#81a1c1;">.</span><span>await</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>        </span><span style="color:#81a1c1;">let</span><span> response </span><span style="color:#81a1c1;">=</span><span> app
+</span><span>            </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">oneshot</span><span>(
+</span><span>                Request</span><span style="color:#81a1c1;">::</span><span>builder()
+</span><span>                    </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">uri</span><span>(</span><span style="color:#a3be8c;">&quot;/users/1&quot;</span><span>)
+</span><span>                    </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">body</span><span>(Body</span><span style="color:#81a1c1;">::</span><span>empty())
+</span><span>                    </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">unwrap</span><span>()</span><span style="color:#eceff4;">,
+</span><span>            )
+</span><span>            </span><span style="color:#81a1c1;">.</span><span>await
+</span><span>            </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">unwrap</span><span>()</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>        assert_eq!(response</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">status</span><span>()</span><span style="color:#eceff4;">, </span><span>StatusCode</span><span style="color:#81a1c1;">::</span><span>OK)</span><span style="color:#eceff4;">;
+</span><span>    }
+</span><span>
+</span><span>    #[tokio::test]
+</span><span>    async </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">test_create_user</span><span>() {
+</span><span>        </span><span style="color:#81a1c1;">let</span><span> app </span><span style="color:#81a1c1;">= </span><span style="color:#88c0d0;">create_app</span><span>()</span><span style="color:#81a1c1;">.</span><span>await</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>        </span><span style="color:#81a1c1;">let</span><span> user_data </span><span style="color:#81a1c1;">= </span><span>json!({
+</span><span>            </span><span style="color:#a3be8c;">&quot;name&quot;</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">&quot;Test User&quot;</span><span style="color:#eceff4;">,
+</span><span>            </span><span style="color:#a3be8c;">&quot;email&quot;</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">&quot;test@example.com&quot;
+</span><span>        })</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>        </span><span style="color:#81a1c1;">let</span><span> response </span><span style="color:#81a1c1;">=</span><span> app
+</span><span>            </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">oneshot</span><span>(
+</span><span>                Request</span><span style="color:#81a1c1;">::</span><span>builder()
+</span><span>                    </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">method</span><span>(</span><span style="color:#a3be8c;">&quot;POST&quot;</span><span>)
+</span><span>                    </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">uri</span><span>(</span><span style="color:#a3be8c;">&quot;/users&quot;</span><span>)
+</span><span>                    </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">header</span><span>(</span><span style="color:#a3be8c;">&quot;content-type&quot;</span><span style="color:#eceff4;">, </span><span style="color:#a3be8c;">&quot;application/json&quot;</span><span>)
+</span><span>                    </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">body</span><span>(Body</span><span style="color:#81a1c1;">::</span><span>from(user_data</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">to_string</span><span>()))
+</span><span>                    </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">unwrap</span><span>()</span><span style="color:#eceff4;">,
+</span><span>            )
+</span><span>            </span><span style="color:#81a1c1;">.</span><span>await
+</span><span>            </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">unwrap</span><span>()</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>        assert_eq!(response</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">status</span><span>()</span><span style="color:#eceff4;">, </span><span>StatusCode</span><span style="color:#81a1c1;">::</span><span>CREATED)</span><span style="color:#eceff4;">;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<h3 id="connection-pooling-and-caching">Connection Pooling and Caching</h3>
+<pre data-lang="rust" style="background-color:#2e3440;color:#d8dee9;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#81a1c1;">use </span><span>redis</span><span style="color:#81a1c1;">::</span><span>AsyncCommands</span><span style="color:#eceff4;">;
+</span><span style="color:#81a1c1;">use </span><span>std</span><span style="color:#81a1c1;">::</span><span>time</span><span style="color:#81a1c1;">::</span><span>Duration</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>#[derive(Clone)]
+</span><span style="color:#81a1c1;">struct </span><span style="color:#8fbcbb;">AppState </span><span>{
+</span><span>    db_pool</span><span style="color:#eceff4;">:</span><span> PgPool,
+</span><span>    redis_client</span><span style="color:#eceff4;">: </span><span>redis</span><span style="color:#81a1c1;">::</span><span>Client,
+</span><span>}
+</span><span>
+</span><span>async </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">get_user_cached</span><span>(
+</span><span>    Path(id): Path&lt;</span><span style="color:#81a1c1;">i32</span><span>&gt;,
+</span><span>    State(state): State&lt;AppState&gt;,
+</span><span>) </span><span style="color:#eceff4;">-&gt; </span><span style="color:#8fbcbb;">Result</span><span>&lt;Json&lt;User&gt;, AppError&gt; {
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> cache_key </span><span style="color:#81a1c1;">= </span><span>format!(</span><span style="color:#a3be8c;">&quot;user:</span><span style="color:#ebcb8b;">{}</span><span style="color:#a3be8c;">&quot;</span><span style="color:#eceff4;">,</span><span> id)</span><span style="color:#eceff4;">;
+</span><span>    
+</span><span>    </span><span style="color:#616e88;">// Try to get from cache first
+</span><span>    </span><span style="color:#81a1c1;">let mut</span><span> redis_conn </span><span style="color:#81a1c1;">=</span><span> state</span><span style="color:#81a1c1;">.</span><span>redis_client</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">get_async_connection</span><span>()</span><span style="color:#81a1c1;">.</span><span>await
+</span><span>        </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">map_err</span><span>(|_| AppError</span><span style="color:#81a1c1;">::</span><span>Database(sqlx</span><span style="color:#81a1c1;">::</span><span>Error</span><span style="color:#81a1c1;">::</span><span>Io(std</span><span style="color:#81a1c1;">::</span><span>io</span><span style="color:#81a1c1;">::</span><span>Error</span><span style="color:#81a1c1;">::</span><span>new(
+</span><span>            std</span><span style="color:#81a1c1;">::</span><span>io</span><span style="color:#81a1c1;">::</span><span>ErrorKind</span><span style="color:#81a1c1;">::</span><span>Other</span><span style="color:#eceff4;">,
+</span><span>            </span><span style="color:#a3be8c;">&quot;Redis connection failed&quot;
+</span><span>        ))))</span><span style="color:#81a1c1;">?</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>    </span><span style="color:#81a1c1;">if let </span><span style="color:#8fbcbb;">Ok</span><span>(cached_user) </span><span style="color:#81a1c1;">=</span><span> redis_conn</span><span style="color:#81a1c1;">.</span><span>get</span><span style="color:#81a1c1;">::</span><span>&lt;</span><span style="color:#81a1c1;">_</span><span>, </span><span style="color:#8fbcbb;">String</span><span>&gt;(</span><span style="color:#81a1c1;">&amp;</span><span>cache_key)</span><span style="color:#81a1c1;">.</span><span>await {
+</span><span>        </span><span style="color:#81a1c1;">if let </span><span style="color:#8fbcbb;">Ok</span><span>(user) </span><span style="color:#81a1c1;">= </span><span>serde_json</span><span style="color:#81a1c1;">::</span><span>from_str</span><span style="color:#81a1c1;">::</span><span>&lt;User&gt;(</span><span style="color:#81a1c1;">&amp;</span><span>cached_user) {
+</span><span>            </span><span style="color:#81a1c1;">return </span><span style="color:#8fbcbb;">Ok</span><span>(Json(user))</span><span style="color:#eceff4;">;
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#616e88;">// Get from database
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> user </span><span style="color:#81a1c1;">= </span><span style="color:#88c0d0;">get_user_by_id</span><span>(</span><span style="color:#81a1c1;">&amp;</span><span>state</span><span style="color:#81a1c1;">.</span><span>db_pool</span><span style="color:#eceff4;">,</span><span> id)
+</span><span>        </span><span style="color:#81a1c1;">.</span><span>await</span><span style="color:#81a1c1;">?
+</span><span>        </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">ok_or</span><span>(AppError</span><span style="color:#81a1c1;">::</span><span>NotFound)</span><span style="color:#81a1c1;">?</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>    </span><span style="color:#616e88;">// Cache the result
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> user_json </span><span style="color:#81a1c1;">= </span><span>serde_json</span><span style="color:#81a1c1;">::</span><span>to_string(</span><span style="color:#81a1c1;">&amp;</span><span>user)</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">unwrap</span><span>()</span><span style="color:#eceff4;">;
+</span><span>    </span><span style="color:#81a1c1;">let _</span><span style="color:#eceff4;">: </span><span>() </span><span style="color:#81a1c1;">=</span><span> redis_conn</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">setex</span><span>(</span><span style="color:#81a1c1;">&amp;</span><span>cache_key</span><span style="color:#eceff4;">, </span><span style="color:#b48ead;">300</span><span style="color:#eceff4;">,</span><span> user_json)</span><span style="color:#81a1c1;">.</span><span>await
+</span><span>        </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">unwrap_or_default</span><span>()</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>    </span><span style="color:#8fbcbb;">Ok</span><span>(Json(user))
+</span><span>}
+</span></code></pre>
+<h2 id="deployment">Deployment</h2>
+<h3 id="docker-configuration">Docker Configuration</h3>
+<pre data-lang="dockerfile" style="background-color:#2e3440;color:#d8dee9;" class="language-dockerfile "><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#616e88;"># Dockerfile
+</span><span style="color:#81a1c1;">FROM</span><span> rust:</span><span style="color:#8fbcbb;">1.75 </span><span style="color:#81a1c1;">as </span><span>builder
+</span><span>
+</span><span style="color:#81a1c1;">WORKDIR </span><span>/app
+</span><span style="color:#81a1c1;">COPY</span><span> Cargo.toml Cargo.lock ./
+</span><span style="color:#81a1c1;">COPY</span><span> src ./src
+</span><span>
+</span><span style="color:#81a1c1;">RUN </span><span>cargo build --release
+</span><span>
+</span><span style="color:#81a1c1;">FROM</span><span> debian:</span><span style="color:#8fbcbb;">bookworm-slim
+</span><span>
+</span><span style="color:#81a1c1;">RUN </span><span>apt-get update &amp;&amp; apt-get install -y \
+</span><span>    ca-certificates \
+</span><span>    &amp;&amp; rm -rf /var/lib/apt/lists/*
+</span><span>
+</span><span style="color:#81a1c1;">COPY</span><span> --from=builder /app/target/release/my-web-app /usr/local/bin/my-web-app
+</span><span>
+</span><span style="color:#81a1c1;">EXPOSE </span><span>3000
+</span><span>
+</span><span style="color:#81a1c1;">CMD </span><span>[</span><span style="color:#a3be8c;">&quot;my-web-app&quot;</span><span>]
+</span></code></pre>
+<h3 id="docker-compose-for-development">Docker Compose for Development</h3>
+<pre data-lang="yaml" style="background-color:#2e3440;color:#d8dee9;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#616e88;"># docker-compose.yml
+</span><span style="color:#8fbcbb;">version</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">&#39;3.8&#39;
+</span><span>
+</span><span style="color:#8fbcbb;">services</span><span style="color:#eceff4;">:
+</span><span>  </span><span style="color:#8fbcbb;">app</span><span style="color:#eceff4;">:
+</span><span>    </span><span style="color:#8fbcbb;">build</span><span style="color:#eceff4;">: .
+</span><span>    </span><span style="color:#8fbcbb;">ports</span><span style="color:#eceff4;">:
+</span><span>      - </span><span style="color:#a3be8c;">&quot;3000:3000&quot;
+</span><span>    </span><span style="color:#8fbcbb;">environment</span><span style="color:#eceff4;">:
+</span><span>      - </span><span style="color:#a3be8c;">DATABASE_URL=postgres://user:password@db:5432/myapp
+</span><span>      - </span><span style="color:#a3be8c;">REDIS_URL=redis://redis:6379
+</span><span>    </span><span style="color:#8fbcbb;">depends_on</span><span style="color:#eceff4;">:
+</span><span>      - </span><span style="color:#a3be8c;">db
+</span><span>      - </span><span style="color:#a3be8c;">redis
+</span><span>
+</span><span>  </span><span style="color:#8fbcbb;">db</span><span style="color:#eceff4;">:
+</span><span>    </span><span style="color:#8fbcbb;">image</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">postgres:15
+</span><span>    </span><span style="color:#8fbcbb;">environment</span><span style="color:#eceff4;">:
+</span><span>      - </span><span style="color:#a3be8c;">POSTGRES_USER=user
+</span><span>      - </span><span style="color:#a3be8c;">POSTGRES_PASSWORD=password
+</span><span>      - </span><span style="color:#a3be8c;">POSTGRES_DB=myapp
+</span><span>    </span><span style="color:#8fbcbb;">volumes</span><span style="color:#eceff4;">:
+</span><span>      - </span><span style="color:#a3be8c;">postgres_data:/var/lib/postgresql/data
+</span><span>    </span><span style="color:#8fbcbb;">ports</span><span style="color:#eceff4;">:
+</span><span>      - </span><span style="color:#a3be8c;">&quot;5432:5432&quot;
+</span><span>
+</span><span>  </span><span style="color:#8fbcbb;">redis</span><span style="color:#eceff4;">:
+</span><span>    </span><span style="color:#8fbcbb;">image</span><span style="color:#eceff4;">: </span><span style="color:#a3be8c;">redis:7-alpine
+</span><span>    </span><span style="color:#8fbcbb;">ports</span><span style="color:#eceff4;">:
+</span><span>      - </span><span style="color:#a3be8c;">&quot;6379:6379&quot;
+</span><span>
+</span><span style="color:#8fbcbb;">volumes</span><span style="color:#eceff4;">:
+</span><span>  </span><span style="color:#8fbcbb;">postgres_data</span><span style="color:#eceff4;">:
+</span></code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="1-structure-your-project">1. Structure Your Project</h3>
+<pre style="background-color:#2e3440;color:#d8dee9;"><code><span>src/
+</span><span>├── main.rs
+</span><span>├── lib.rs
+</span><span>├── handlers/
+</span><span>│   ├── mod.rs
+</span><span>│   ├── users.rs
+</span><span>│   └── auth.rs
+</span><span>├── models/
+</span><span>│   ├── mod.rs
+</span><span>│   └── user.rs
+</span><span>├── services/
+</span><span>│   ├── mod.rs
+</span><span>│   └── user_service.rs
+</span><span>├── middleware/
+</span><span>│   ├── mod.rs
+</span><span>│   └── auth.rs
+</span><span>└── utils/
+</span><span>    ├── mod.rs
+</span><span>    └── database.rs
+</span></code></pre>
+<h3 id="2-use-environment-configuration">2. Use Environment Configuration</h3>
+<pre data-lang="rust" style="background-color:#2e3440;color:#d8dee9;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#81a1c1;">use </span><span>serde</span><span style="color:#81a1c1;">::</span><span>Deserialize</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>#[derive(Deserialize)]
+</span><span style="color:#81a1c1;">struct </span><span style="color:#8fbcbb;">Config </span><span>{
+</span><span>    database_url</span><span style="color:#eceff4;">:</span><span> String,
+</span><span>    redis_url</span><span style="color:#eceff4;">:</span><span> String,
+</span><span>    jwt_secret</span><span style="color:#eceff4;">:</span><span> String,
+</span><span>    port</span><span style="color:#eceff4;">: </span><span style="color:#81a1c1;">u16</span><span>,
+</span><span>}
+</span><span>
+</span><span style="color:#81a1c1;">impl </span><span>Config {
+</span><span>    </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">from_env</span><span>() </span><span style="color:#eceff4;">-&gt; </span><span style="color:#8fbcbb;">Result</span><span>&lt;</span><span style="color:#81a1c1;">Self</span><span>, envy</span><span style="color:#81a1c1;">::</span><span>Error&gt; {
+</span><span>        envy</span><span style="color:#81a1c1;">::</span><span>from_env()
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="3-implement-proper-logging">3. Implement Proper Logging</h3>
+<pre data-lang="rust" style="background-color:#2e3440;color:#d8dee9;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#81a1c1;">use </span><span>tracing</span><span style="color:#81a1c1;">::</span><span>{info</span><span style="color:#eceff4;">,</span><span> warn</span><span style="color:#eceff4;">,</span><span> error}</span><span style="color:#eceff4;">;
+</span><span style="color:#81a1c1;">use</span><span> tracing_subscriber</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>#[tokio::main]
+</span><span>async </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">main</span><span>() {
+</span><span>    tracing_subscriber</span><span style="color:#81a1c1;">::</span><span>init()</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>    info!(</span><span style="color:#a3be8c;">&quot;Starting server...&quot;</span><span>)</span><span style="color:#eceff4;">;
+</span><span>    
+</span><span>    </span><span style="color:#616e88;">// Your app code here
+</span><span>    
+</span><span>    info!(</span><span style="color:#a3be8c;">&quot;Server started on port 3000&quot;</span><span>)</span><span style="color:#eceff4;">;
+</span><span>}
+</span></code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<p>Rust offers compelling advantages for web development:</p>
+<ul>
+<li><strong>Performance</strong>: Near C-level performance with high-level abstractions</li>
+<li><strong>Safety</strong>: Memory and thread safety without garbage collection</li>
+<li><strong>Ecosystem</strong>: Mature libraries and frameworks</li>
+<li><strong>Tooling</strong>: Excellent development experience with Cargo</li>
+</ul>
+<p>While there’s a learning curve, especially around the borrow checker, the benefits of Rust for web development are substantial. The combination of performance, safety, and a growing ecosystem makes it an excellent choice for building robust web applications.</p>
+<p>Whether you’re building APIs, microservices, or full web applications, Rust provides the tools and performance characteristics needed for modern web development.</p>
+<hr />
+<p><em>Have you tried building web applications with Rust? What has your experience been like?</em></p>
+
+        </div>
+
+        <!-- Post Footer -->
+        <footer class="post-footer" style="padding: 2rem 0; border-top: 1px solid var(--color-border);">
+            <!-- Tags -->
+            
+
+            <!-- Share Buttons -->
+            <div class="share-buttons" style="margin-bottom: 2rem;">
+                <h3 style="font-size: 1rem; margin-bottom: 1rem; color: var(--color-text);">Share this post:</h3>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="https://twitter.com/intent/tweet?text=Building%20Web%20Applications%20with%20Rust%3A%20A%20Comprehensive%20Guide&url=https%3A&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;rust-web-development&#x2F;"
+                        target="_blank" rel="noopener noreferrer"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background-color: #1da1f2; color: white; border-radius: var(--radius-md); text-decoration: none; font-size: 0.875rem;">
+                        🐦 Twitter
+                    </a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;rust-web-development&#x2F;"
+                        target="_blank" rel="noopener noreferrer"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background-color: #0077b5; color: white; border-radius: var(--radius-md); text-decoration: none; font-size: 0.875rem;">
+                        💼 LinkedIn
+                    </a>
+                    <button onclick="copyToClipboard('https:&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;rust-web-development&#x2F;')"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background-color: var(--color-bg-tertiary); color: var(--color-text); border: 1px solid var(--color-border); border-radius: var(--radius-md); cursor: pointer; font-size: 0.875rem;">
+                        🔗 Copy Link
+                    </button>
+                </div>
+            </div>
+
+            <!-- Author Bio -->
+            <div class="author-bio"
+                style="padding: 2rem; background-color: var(--color-bg-secondary); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+                <h3 style="margin-bottom: 1rem;">About the Author</h3>
+                <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                    <div
+                        style="flex-shrink: 0; width: 80px; height: 80px; background: linear-gradient(135deg, var(--color-primary), var(--color-accent)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white;">
+                        👤
+                    </div>
+                    <div style="flex: 1;">
+                        <h4 style="margin-bottom: 0.5rem;">Your Name</h4>
+                        <p style="color: var(--color-text-light); margin-bottom: 1rem;">
+                            Full-stack developer passionate about modern web technologies, Rust, and creating elegant solutions to complex problems.
+                        </p>
+                        
+                        <div class="social-links">
+                            
+                            <a href="https:&#x2F;&#x2F;github.com&#x2F;yourusername" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub">
+                                🐙
+                                
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;yourprofile" target="_blank" rel="noopener noreferrer"
+                                aria-label="LinkedIn">
+                                💼
+                                
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;yourusername" target="_blank" rel="noopener noreferrer"
+                                aria-label="Twitter">
+                                🐦
+                                
+                            </a>
+                            
+                            <a href="mailto:your.email@example.com" target="_blank" rel="noopener noreferrer"
+                                aria-label="Email">
+                                📧
+                                
+                            </a>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </article>
+
+    <!-- Navigation -->
+    <nav class="post-navigation" style="margin-top: 3rem; padding: 2rem 0; border-top: 1px solid var(--color-border);">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="/blog/" style="color: var(--color-primary); text-decoration: none; font-weight: 600;">
+                ← Back to Blog
+            </a>
+            <a href="#top" style="color: var(--color-primary); text-decoration: none; font-weight: 600;">
+                ↑ Back to Top
+            </a>
+        </div>
+    </nav>
+</div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <p>Full-stack developer passionate about modern web technologies, Rust, and creating elegant solutions to complex problems.</p>
+                    
+                    <div class="social-links">
+                        
+                        <a href="https:&#x2F;&#x2F;github.com&#x2F;yourusername" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub">
+                            🐙
+                            
+                        </a>
+                        
+                        <a href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;yourprofile" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn">
+                            💼
+                            
+                        </a>
+                        
+                        <a href="https:&#x2F;&#x2F;twitter.com&#x2F;yourusername" target="_blank" rel="noopener noreferrer"
+                            aria-label="Twitter">
+                            🐦
+                            
+                        </a>
+                        
+                        <a href="mailto:your.email@example.com" target="_blank" rel="noopener noreferrer"
+                            aria-label="Email">
+                            📧
+                            
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        
+                        <li><a href="https://yourblog.com">Home</a></li>
+                        
+                        <li><a href="https://yourblog.com/blog">Blog</a></li>
+                        
+                        <li><a href="https://yourblog.com/about">About</a></li>
+                        
+                        <li><a href="https://yourblog.com/contact">Contact</a></li>
+                        
+                        
+                        <li><a href="/rss.xml">RSS Feed</a></li>
+                        
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="/blog/">All Posts</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Built with ❤️ using Zola and modern web technologies</p>
+                <p>&copy; 2025 Your Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    
+<script>
+functio    Clipboard(text) {
+        navigator.c        oard.writeText(text).then(function () {
+        co nst b            event.target;
+            const original            utton.innerHTML;
+        butt            HTML = '✅ Copied!';
+            button.styl            oundColor = 'var(--color-primary                button.style.color = 'white';
+        
+        setT            ) => {
+            button.inneo            ext;
+            bu                ackgroundColor = 'var(--color-bg-                            button.style.color = 'var(--color - text)';
+
+        }).catch (function(err) {
+        cons            r('Could n        opy text: ', err);
+            'Could not copy link to clipboard');
+        });
+    }
+</script>
+
+</body>
+
+</html>
