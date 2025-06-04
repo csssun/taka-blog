@@ -35,11 +35,19 @@ git push origin main
 ```
 
 ### 🌐 部署到 Vercel
+
+#### 🚀 一键部署（推荐）
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/csssun/taka-blog1&project-name=my-zola-blog&repository-name=my-zola-blog)
+
+#### 📋 手动部署
 ```bash
-# 1. 推送到 GitHub
+# 1. 检查部署配置
+npm run check
+
+# 2. 推送到 GitHub
 git push origin main
 
-# 2. Vercel 自动部署
+# 3. Vercel 自动部署
 # 无需额外操作，几分钟后自动上线
 ```
 

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>如何在这个博客中写文章 - Your Professional Blog</title>
+    <meta name="description" content="
+详细介绍如何在 Zola 博客中创建和发布新的文章，包括 Markdown 语法和最佳实践
+
+">
+    <meta name="author" content="Your Name">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https:&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;how-to-write-posts&#x2F;">
+    <meta property="og:title" content="如何在这个博客中写文章">
+    <meta property="og:description"
+        content="
+详细介绍如何在 Zola 博客中创建和发布新的文章，包括 Markdown 语法和最佳实践
+
+">
+    <meta property="og:image"
+        content="https:&#x2F;&#x2F;yourblog.com/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https:&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;how-to-write-posts&#x2F;">
+    <meta property="twitter:title" content="Your Professional Blog">
+    <meta property="twitter:description"
+        content="A modern, elegant blog showcasing technical expertise and insights">
+    <meta property="twitter:image"
+        content="https:&#x2F;&#x2F;yourblog.com/images/og-image.jpg">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2563eb">
+    <meta name="msapplication-TileColor" content="#2563eb">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- RSS Feed -->
+    
+    <link rel="alternate" type="application/rss+xml" title="Your Professional Blog" href="/rss.xml">
+    
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https:&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;how-to-write-posts&#x2F;">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/main.css">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Analytics -->
+    
+
+    <!-- Google Site Verification -->
+    
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "name": "Your Professional Blog",
+        "description": "A modern, elegant blog showcasing technical expertise and insights",
+        "url": "https:&#x2F;&#x2F;yourblog.com",
+        "author": {
+            "@type": "Person",
+            "name": "Your Name",
+            "email": "your.email@example.com"
+        }
+        ,
+"headline": "如何在这个博客中写文章",
+"datePublished": "2024-01-20",
+"dateModified": "2024-01-20",
+"author": {
+"@type": "Person",
+"name": "Your Name"
+},
+"publisher": {
+"@type": "Organization",
+"name": "Your Professional Blog",
+"url": "https:&#x2F;&#x2F;yourblog.com"
+},
+"mainEntityOfPage": {
+"@type": "WebPage",
+"@id": "https:&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;how-to-write-posts&#x2F;"
+}
+    }
+    </script>
+
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    Your Professional Blog
+                </a>
+
+                <nav class="nav">
+                    
+                    <a href="https://yourblog.com" >
+                        Home
+                    </a>
+                    
+                    <a href="https://yourblog.com/blog" >
+                        Blog
+                    </a>
+                    
+                    <a href="https://yourblog.com/about" >
+                        About
+                    </a>
+                    
+                    <a href="https://yourblog.com/contact" >
+                        Contact
+                    </a>
+                    
+                </nav>
+
+                <div class="header-actions">
+                    
+                    <button class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+<div class="container">
+    <article class="blog-post" style="max-width: 800px; margin: 0 auto;">
+        <!-- Post Header -->
+        <header class="post-header"
+            style="text-align: center; padding: 2rem 0 3rem; border-bottom: 1px solid var(--color-border);">
+            
+
+            <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.2;">
+                如何在这个博客中写文章
+            </h1>
+
+            
+            <p
+                style="font-size: 1.25rem; color: var(--color-text-light); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                详细介绍如何在 Zola 博客中创建和发布新的文章，包括 Markdown 语法和最佳实践
+            </p>
+            
+
+            <div class="post-meta"
+                style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; color: var(--color-text-muted); font-size: 0.875rem;">
+                <time datetime="2024-01-20">
+                    📅 January 20, 2024
+                </time>
+                
+                <span>⏱️ 4 min read</span>
+                
+                
+                <span>✍️ Your Name</span>
+                
+            </div>
+        </header>
+
+        <!-- Post Content -->
+        <div class="post-content" style="padding: 3rem 0; line-height: 1.8; font-size: 1.125rem;">
+            <h1 id="ru-he-zai-zhe-ge-bo-ke-zhong-xie-wen-zhang">如何在这个博客中写文章</h1>
+<p>欢迎来到您的新博客！这篇文章将教您如何创建和发布新的博客文章。</p>
+<h2 id="memo-chuang-jian-xin-wen-zhang">📝 创建新文章</h2>
+<h3 id="1-wen-jian-wei-zhi">1. 文件位置</h3>
+<p>在 <code>content/blog/</code> 目录下创建新的 <code>.md</code> 文件：</p>
+<pre style="background-color:#2e3440;color:#d8dee9;"><code><span>content/blog/my-awesome-post.md
+</span></code></pre>
+<h3 id="2-wen-zhang-tou-bu-xin-xi-front-matter">2. 文章头部信息（Front Matter）</h3>
+<p>每篇文章都需要以 <code>+++</code> 开始和结束的头部信息：</p>
+<pre data-lang="toml" style="background-color:#2e3440;color:#d8dee9;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#bf616a;color:#d8dee9;">+++</span><span>
+</span><span style="color:#81a1c1;">title </span><span>= </span><span style="color:#a3be8c;">&quot;您的文章标题&quot;
+</span><span style="color:#81a1c1;">description </span><span>= </span><span style="color:#a3be8c;">&quot;文章的简短描述，用于 SEO 和社交媒体分享&quot;
+</span><span style="color:#81a1c1;">date </span><span>= 2024-01-20
+</span><span style="color:#81a1c1;">updated </span><span>= 2024-01-20
+</span><span>
+</span><span style="color:#616e88;"># 分类和标签（目前已禁用）
+</span><span style="color:#616e88;"># [taxonomies]
+</span><span style="color:#616e88;"># categories = [&quot;技术&quot;, &quot;教程&quot;]
+</span><span style="color:#616e88;"># tags = [&quot;zola&quot;, &quot;博客&quot;, &quot;教程&quot;]
+</span><span>
+</span><span>[extra]
+</span><span style="color:#81a1c1;">author </span><span>= </span><span style="color:#a3be8c;">&quot;您的名字&quot;
+</span><span style="background-color:#bf616a;color:#d8dee9;">+++</span><span>
+</span></code></pre>
+<h3 id="3-wen-zhang-nei-rong">3. 文章内容</h3>
+<p>头部信息后面就是您的文章内容，使用 Markdown 语法：</p>
+<h2 id="markdown-yu-fa-zhi-nan">Markdown 语法指南</h2>
+<h3 id="biao-ti">标题</h3>
+<pre data-lang="markdown" style="background-color:#2e3440;color:#d8dee9;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#88c0d0;"># 一级标题
+</span><span style="color:#88c0d0;">## 二级标题
+</span><span style="color:#88c0d0;">### 三级标题
+</span></code></pre>
+<h3 id="wen-ben-ge-shi">文本格式</h3>
+<pre data-lang="markdown" style="background-color:#2e3440;color:#d8dee9;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="font-weight:bold;color:#d8dee9;">**粗体文本**
+</span><span style="font-style:italic;color:#d8dee9;">*斜体文本*
+</span><span>~~删除线~~
+</span><span style="color:#8fbcbb;">`行内代码`
+</span></code></pre>
+<h3 id="lian-jie-he-tu-pian">链接和图片</h3>
+<pre data-lang="markdown" style="background-color:#2e3440;color:#d8dee9;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#81a1c1;">[</span><span style="color:#88c0d0;">链接文本</span><span style="color:#81a1c1;">]</span><span>(https://example.com)
+</span><span style="color:#81a1c1;">![</span><span style="color:#88c0d0;">图片描述</span><span style="color:#81a1c1;">]</span><span>(image.jpg)
+</span></code></pre>
+<h3 id="lie-biao">列表</h3>
+<pre data-lang="markdown" style="background-color:#2e3440;color:#d8dee9;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#81a1c1;">- </span><span>无序列表项 1
+</span><span style="color:#81a1c1;">-</span><span> 无序列表项 2
+</span><span>
+</span><span style="color:#81a1c1;">1. </span><span>有序列表项 1
+</span><span style="color:#81a1c1;">2.</span><span> 有序列表项 2
+</span></code></pre>
+<h3 id="dai-ma-kuai">代码块</h3>
+<pre data-lang="markdown" style="background-color:#2e3440;color:#d8dee9;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#8fbcbb;">```</span><span>rust
+</span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">main</span><span>() {
+</span><span>    println!(</span><span style="color:#a3be8c;">&quot;Hello, world!&quot;</span><span>)</span><span style="color:#eceff4;">;
+</span><span>}
+</span><span style="color:#8fbcbb;">```
+</span></code></pre>
+<h3 id="yin-yong">引用</h3>
+<pre data-lang="markdown" style="background-color:#2e3440;color:#d8dee9;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#8fbcbb;">&gt;</span><span style="color:#616e88;"> 这是一个引用块
+</span><span style="color:#8fbcbb;">&gt;</span><span style="color:#616e88;"> 可以包含多行内容
+</span></code></pre>
+<h3 id="biao-ge">表格</h3>
+<pre data-lang="markdown" style="background-color:#2e3440;color:#d8dee9;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#81a1c1;">|</span><span> 列1 </span><span style="color:#81a1c1;">|</span><span> 列2 </span><span style="color:#81a1c1;">|</span><span> 列3 </span><span style="color:#81a1c1;">|
+</span><span style="color:#81a1c1;">|-----|-----|-----|
+</span><span style="color:#81a1c1;">|</span><span> 数据1 </span><span style="color:#81a1c1;">|</span><span> 数据2 </span><span style="color:#81a1c1;">|</span><span> 数据3 </span><span style="color:#81a1c1;">|
+</span><span style="color:#81a1c1;">|</span><span> 数据4 </span><span style="color:#81a1c1;">|</span><span> 数据5 </span><span style="color:#81a1c1;">|</span><span> 数据6 </span><span style="color:#81a1c1;">|
+</span></code></pre>
+<h2 id="art-te-shu-gong-neng">🎨 特殊功能</h2>
+<h3 id="1-yu-fa-gao-liang">1. 语法高亮</h3>
+<p>支持多种编程语言的语法高亮：</p>
+<pre data-lang="javascript" style="background-color:#2e3440;color:#d8dee9;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#81a1c1;">function </span><span style="color:#88c0d0;">greet</span><span>(name) {
+</span><span>    </span><span style="color:#8fbcbb;">console</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">log</span><span>(</span><span style="color:#a3be8c;">`Hello, </span><span style="color:#5e81ac;">${</span><span>name</span><span style="color:#5e81ac;">}</span><span style="color:#a3be8c;">!`</span><span>)</span><span style="color:#eceff4;">;
+</span><span>}
+</span></code></pre>
+<pre data-lang="python" style="background-color:#2e3440;color:#d8dee9;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#81a1c1;">def </span><span style="color:#88c0d0;">greet</span><span>(name):
+</span><span>    </span><span style="font-style:italic;color:#88c0d0;">print</span><span>(</span><span style="color:#81a1c1;">f</span><span style="color:#a3be8c;">&quot;Hello, </span><span>{name}</span><span style="color:#a3be8c;">!&quot;</span><span>)
+</span></code></pre>
+<h3 id="2-shu-xue-gong-shi-ru-guo-xu-yao">2. 数学公式（如果需要）</h3>
+<p>可以添加 KaTeX 支持来显示数学公式。</p>
+<h3 id="3-zi-ding-yi-yang-shi">3. 自定义样式</h3>
+<p>您可以在文章中使用 HTML 和内联 CSS：</p>
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 1rem; color: white; text-align: center; margin: 2rem 0;">
+  <h3 style="color: white; margin-bottom: 1rem;">这是一个自定义样式的框</h3>
+  <p style="margin: 0;">您可以使用 HTML 和 CSS 来创建特殊的视觉效果</p>
+</div>
+<h2 id="clipboard-wen-zhang-xie-zuo-zui-jia-shi-jian">📋 文章写作最佳实践</h2>
+<h3 id="1-wen-jian-ming-ming">1. 文件命名</h3>
+<ul>
+<li>使用小写字母和连字符：<code>my-awesome-post.md</code></li>
+<li>可以包含日期：<code>2024-01-20-tutorial.md</code></li>
+<li>避免空格和特殊字符</li>
+</ul>
+<h3 id="2-seo-you-hua">2. SEO 优化</h3>
+<ul>
+<li>写好 <code>title</code> 和 <code>description</code></li>
+<li>使用清晰的标题结构（H1, H2, H3）</li>
+<li>添加相关的标签和分类</li>
+</ul>
+<h3 id="3-nei-rong-jie-gou">3. 内容结构</h3>
+<ul>
+<li>使用清晰的标题层次</li>
+<li>添加目录（如果文章较长）</li>
+<li>使用列表和代码块提高可读性</li>
+<li>添加相关图片和示例</li>
+</ul>
+<h3 id="4-fa-bu-liu-cheng">4. 发布流程</h3>
+<ol>
+<li>在 <code>content/blog/</code> 创建新文件</li>
+<li>编写文章内容</li>
+<li>本地预览：<code>zola serve</code></li>
+<li>提交到 Git：<code>git add . &amp;&amp; git commit -m "Add new post"</code></li>
+<li>推送到 GitHub：<code>git push</code></li>
+<li>Vercel 自动部署</li>
+</ol>
+<h2 id="rocket-fa-bu-wen-zhang">🚀 发布文章</h2>
+<h3 id="ben-di-yu-lan">本地预览</h3>
+<pre data-lang="bash" style="background-color:#2e3440;color:#d8dee9;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#88c0d0;">cd</span><span> your-blog-directory
+</span><span style="color:#88c0d0;">zola</span><span> serve
+</span></code></pre>
+<p>访问 <code>http://127.0.0.1:1111</code> 预览您的文章。</p>
+<h3 id="bu-shu-dao-sheng-chan-huan-jing">部署到生产环境</h3>
+<pre data-lang="bash" style="background-color:#2e3440;color:#d8dee9;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#88c0d0;">git</span><span> add .
+</span><span style="color:#88c0d0;">git</span><span> commit -m </span><span style="color:#a3be8c;">&quot;Add new blog post: 文章标题&quot;
+</span><span style="color:#88c0d0;">git</span><span> push origin main
+</span></code></pre>
+<p>Vercel 会自动检测到更改并重新部署您的网站。</p>
+<h2 id="bulb-xie-zuo-ji-qiao">💡 写作技巧</h2>
+<ol>
+<li><strong>开头要吸引人</strong>：用一个有趣的问题或故事开始</li>
+<li><strong>使用小标题</strong>：将长文章分成易读的部分</li>
+<li><strong>添加代码示例</strong>：如果是技术文章，提供实际的代码</li>
+<li><strong>包含图片</strong>：视觉元素让文章更有趣</li>
+<li><strong>总结要点</strong>：在文章结尾总结主要观点</li>
+</ol>
+<p>现在您已经知道如何在这个美丽的博客中写文章了！开始创作您的第一篇文章吧！🎉</p>
+
+        </div>
+
+        <!-- Post Footer -->
+        <footer class="post-footer" style="padding: 2rem 0; border-top: 1px solid var(--color-border);">
+            <!-- Tags -->
+            
+
+            <!-- Share Buttons -->
+            <div class="share-buttons" style="margin-bottom: 2rem;">
+                <h3 style="font-size: 1rem; margin-bottom: 1rem; color: var(--color-text);">Share this post:</h3>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="https://twitter.com/intent/tweet?text=%E5%A6%82%E4%BD%95%E5%9C%A8%E8%BF%99%E4%B8%AA%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%86%99%E6%96%87%E7%AB%A0&url=https%3A&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;how-to-write-posts&#x2F;"
+                        target="_blank" rel="noopener noreferrer"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background-color: #1da1f2; color: white; border-radius: var(--radius-md); text-decoration: none; font-size: 0.875rem;">
+                        🐦 Twitter
+                    </a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;how-to-write-posts&#x2F;"
+                        target="_blank" rel="noopener noreferrer"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background-color: #0077b5; color: white; border-radius: var(--radius-md); text-decoration: none; font-size: 0.875rem;">
+                        💼 LinkedIn
+                    </a>
+                    <button onclick="copyToClipboard('https:&#x2F;&#x2F;yourblog.com&#x2F;blog&#x2F;how-to-write-posts&#x2F;')"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background-color: var(--color-bg-tertiary); color: var(--color-text); border: 1px solid var(--color-border); border-radius: var(--radius-md); cursor: pointer; font-size: 0.875rem;">
+                        🔗 Copy Link
+                    </button>
+                </div>
+            </div>
+
+            <!-- Author Bio -->
+            <div class="author-bio"
+                style="padding: 2rem; background-color: var(--color-bg-secondary); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+                <h3 style="margin-bottom: 1rem;">About the Author</h3>
+                <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                    <div
+                        style="flex-shrink: 0; width: 80px; height: 80px; background: linear-gradient(135deg, var(--color-primary), var(--color-accent)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white;">
+                        👤
+                    </div>
+                    <div style="flex: 1;">
+                        <h4 style="margin-bottom: 0.5rem;">Your Name</h4>
+                        <p style="color: var(--color-text-light); margin-bottom: 1rem;">
+                            Full-stack developer passionate about modern web technologies, Rust, and creating elegant solutions to complex problems.
+                        </p>
+                        
+                        <div class="social-links">
+                            
+                            <a href="https:&#x2F;&#x2F;github.com&#x2F;yourusername" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub">
+                                🐙
+                                
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;yourprofile" target="_blank" rel="noopener noreferrer"
+                                aria-label="LinkedIn">
+                                💼
+                                
+                            </a>
+                            
+                            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;yourusername" target="_blank" rel="noopener noreferrer"
+                                aria-label="Twitter">
+                                🐦
+                                
+                            </a>
+                            
+                            <a href="mailto:your.email@example.com" target="_blank" rel="noopener noreferrer"
+                                aria-label="Email">
+                                📧
+                                
+                            </a>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </article>
+
+    <!-- Navigation -->
+    <nav class="post-navigation" style="margin-top: 3rem; padding: 2rem 0; border-top: 1px solid var(--color-border);">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="/blog/" style="color: var(--color-primary); text-decoration: none; font-weight: 600;">
+                ← Back to Blog
+            </a>
+            <a href="#top" style="color: var(--color-primary); text-decoration: none; font-weight: 600;">
+                ↑ Back to Top
+            </a>
+        </div>
+    </nav>
+</div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <p>Full-stack developer passionate about modern web technologies, Rust, and creating elegant solutions to complex problems.</p>
+                    
+                    <div class="social-links">
+                        
+                        <a href="https:&#x2F;&#x2F;github.com&#x2F;yourusername" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub">
+                            🐙
+                            
+                        </a>
+                        
+                        <a href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;yourprofile" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn">
+                            💼
+                            
+                        </a>
+                        
+                        <a href="https:&#x2F;&#x2F;twitter.com&#x2F;yourusername" target="_blank" rel="noopener noreferrer"
+                            aria-label="Twitter">
+                            🐦
+                            
+                        </a>
+                        
+                        <a href="mailto:your.email@example.com" target="_blank" rel="noopener noreferrer"
+                            aria-label="Email">
+                            📧
+                            
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        
+                        <li><a href="https://yourblog.com">Home</a></li>
+                        
+                        <li><a href="https://yourblog.com/blog">Blog</a></li>
+                        
+                        <li><a href="https://yourblog.com/about">About</a></li>
+                        
+                        <li><a href="https://yourblog.com/contact">Contact</a></li>
+                        
+                        
+                        <li><a href="/rss.xml">RSS Feed</a></li>
+                        
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="/blog/">All Posts</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Built with ❤️ using Zola and modern web technologies</p>
+                <p>&copy; 2025 Your Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    
+<script>
+functio    Clipboard(text) {
+        navigator.c        oard.writeText(text).then(function () {
+        co nst b            event.target;
+            const original            utton.innerHTML;
+        butt            HTML = '✅ Copied!';
+            button.styl            oundColor = 'var(--color-primary                button.style.color = 'white';
+        
+        setT            ) => {
+            button.inneo            ext;
+            bu                ackgroundColor = 'var(--color-bg-                            button.style.color = 'var(--color - text)';
+
+        }).catch (function(err) {
+        cons            r('Could n        opy text: ', err);
+            'Could not copy link to clipboard');
+        });
+    }
+</script>
+
+</body>
+
+</html>

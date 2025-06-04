@@ -1,0 +1,31 @@
+{
+  "name": "professional-zola-blog",
+  "version": "1.0.0",
+  "description": "A modern, elegant, and high-performance static blog built with Zola",
+  "scripts": {
+    "build": "node build-node.js",
+    "vercel-build": "node build-node.js",
+    "build-bash": "bash build.sh",
+    "dev": "zola serve",
+    "serve": "zola serve",
+    "start": "zola serve",
+    "check": "node check-deployment.js",
+    "deploy-check": "node check-deployment.js"
+  },
+  "keywords": [
+    "zola",
+    "blog",
+    "static-site",
+    "rust",
+    "vercel"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/your-blog-repo.git"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

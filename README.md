@@ -63,7 +63,24 @@ zola serve
 
 ### 🌐 一键部署到 Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/csssun/taka-blog)
+<div align="center">
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/csssun/taka-blog1&project-name=my-zola-blog&repository-name=my-zola-blog)
+
+**点击上方按钮，30秒内完成部署！**
+
+</div>
+
+#### 📋 部署步骤：
+1. 点击 "Deploy with Vercel" 按钮
+2. 使用 GitHub 账号登录 Vercel
+3. 选择仓库名称（或使用默认）
+4. 点击 "Deploy" - Vercel 会自动：
+   - 🔧 检测项目类型
+   - 📦 安装依赖
+   - 🏗️ 构建网站
+   - 🚀 部署到全球 CDN
+5. 🎉 几分钟后您的博客就上线了！
 
 ### ✍️ 写第一篇文章
 
@@ -99,9 +116,10 @@ git push origin main
 ## 📖 详细文档
 
 - **📚 [完整使用指南](DOCUMENTATION.md)** - 详细的功能介绍和使用说明
-- **🚀 [Vercel 部署指南](DOCUMENTATION.md#-vercel-部署指南)** - 一步步部署教程
+- **🚀 [Vercel 部署指南](VERCEL_DEPLOYMENT.md)** - 一键部署和故障排除
+- **🎉 [部署后配置](POST_DEPLOYMENT.md)** - 部署成功后的个性化设置
 - **✍️ [写作指南](DOCUMENTATION.md#️-写作指南)** - Markdown 语法和最佳实践
-- **🛠️ [自定义配置](DOCUMENTATION.md#️-自定义配置)** - 个性化设置
+- **🚀 [快速参考](QUICK_REFERENCE.md)** - 常用命令和模板
 - **🔧 [故障排除](DOCUMENTATION.md#-故障排除)** - 常见问题解决方案
 
 ## 🌟 预览效果

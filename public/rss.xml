@@ -7,7 +7,149 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://yourblog.com/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Sat, 20 Jan 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>如何在这个博客中写文章</title>
+          <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://yourblog.com/blog/how-to-write-posts/</link>
+          <guid>https://yourblog.com/blog/how-to-write-posts/</guid>
+          <description xml:base="https://yourblog.com/blog/how-to-write-posts/">&lt;h1 id=&quot;ru-he-zai-zhe-ge-bo-ke-zhong-xie-wen-zhang&quot;&gt;如何在这个博客中写文章&lt;&#x2F;h1&gt;
+&lt;p&gt;欢迎来到您的新博客！这篇文章将教您如何创建和发布新的博客文章。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;memo-chuang-jian-xin-wen-zhang&quot;&gt;📝 创建新文章&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;1-wen-jian-wei-zhi&quot;&gt;1. 文件位置&lt;&#x2F;h3&gt;
+&lt;p&gt;在 &lt;code&gt;content&#x2F;blog&#x2F;&lt;&#x2F;code&gt; 目录下创建新的 &lt;code&gt;.md&lt;&#x2F;code&gt; 文件：&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2e3440;color:#d8dee9;&quot;&gt;&lt;code&gt;&lt;span&gt;content&#x2F;blog&#x2F;my-awesome-post.md
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;2-wen-zhang-tou-bu-xin-xi-front-matter&quot;&gt;2. 文章头部信息（Front Matter）&lt;&#x2F;h3&gt;
+&lt;p&gt;每篇文章都需要以 &lt;code&gt;+++&lt;&#x2F;code&gt; 开始和结束的头部信息：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;background-color:#bf616a;color:#d8dee9;&quot;&gt;+++&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;title &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;您的文章标题&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;description &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;文章的简短描述，用于 SEO 和社交媒体分享&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;date &lt;&#x2F;span&gt;&lt;span&gt;= 2024-01-20
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;updated &lt;&#x2F;span&gt;&lt;span&gt;= 2024-01-20
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;# 分类和标签（目前已禁用）
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;# [taxonomies]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;# categories = [&amp;quot;技术&amp;quot;, &amp;quot;教程&amp;quot;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;# tags = [&amp;quot;zola&amp;quot;, &amp;quot;博客&amp;quot;, &amp;quot;教程&amp;quot;]
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[extra]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;author &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;您的名字&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#bf616a;color:#d8dee9;&quot;&gt;+++&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;3-wen-zhang-nei-rong&quot;&gt;3. 文章内容&lt;&#x2F;h3&gt;
+&lt;p&gt;头部信息后面就是您的文章内容，使用 Markdown 语法：&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;markdown-yu-fa-zhi-nan&quot;&gt;Markdown 语法指南&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;biao-ti&quot;&gt;标题&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;# 一级标题
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;## 二级标题
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;### 三级标题
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;wen-ben-ge-shi&quot;&gt;文本格式&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span style=&quot;font-weight:bold;color:#d8dee9;&quot;&gt;**粗体文本**
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#d8dee9;&quot;&gt;*斜体文本*
+&lt;&#x2F;span&gt;&lt;span&gt;~~删除线~~
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbcbb;&quot;&gt;`行内代码`
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;lian-jie-he-tu-pian&quot;&gt;链接和图片&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;链接文本&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;(https:&#x2F;&#x2F;example.com)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;![&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;图片描述&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;(image.jpg)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;lie-biao&quot;&gt;列表&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span&gt;无序列表项 1
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span&gt; 无序列表项 2
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;1. &lt;&#x2F;span&gt;&lt;span&gt;有序列表项 1
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;2.&lt;&#x2F;span&gt;&lt;span&gt; 有序列表项 2
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;dai-ma-kuai&quot;&gt;代码块&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span style=&quot;color:#8fbcbb;&quot;&gt;```&lt;&#x2F;span&gt;&lt;span&gt;rust
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;    println!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;Hello, world!&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbcbb;&quot;&gt;```
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;yin-yong&quot;&gt;引用&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span style=&quot;color:#8fbcbb;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt; 这是一个引用块
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbcbb;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt; 可以包含多行内容
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;biao-ge&quot;&gt;表格&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;|&lt;&#x2F;span&gt;&lt;span&gt; 列1 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;|&lt;&#x2F;span&gt;&lt;span&gt; 列2 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;|&lt;&#x2F;span&gt;&lt;span&gt; 列3 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;|
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;|-----|-----|-----|
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;|&lt;&#x2F;span&gt;&lt;span&gt; 数据1 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;|&lt;&#x2F;span&gt;&lt;span&gt; 数据2 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;|&lt;&#x2F;span&gt;&lt;span&gt; 数据3 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;|
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;|&lt;&#x2F;span&gt;&lt;span&gt; 数据4 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;|&lt;&#x2F;span&gt;&lt;span&gt; 数据5 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;|&lt;&#x2F;span&gt;&lt;span&gt; 数据6 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;|
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;art-te-shu-gong-neng&quot;&gt;🎨 特殊功能&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;1-yu-fa-gao-liang&quot;&gt;1. 语法高亮&lt;&#x2F;h3&gt;
+&lt;p&gt;支持多种编程语言的语法高亮：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;greet&lt;&#x2F;span&gt;&lt;span&gt;(name) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbcbb;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;`Hello, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5e81ac;&quot;&gt;${&lt;&#x2F;span&gt;&lt;span&gt;name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5e81ac;&quot;&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;!`&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;greet&lt;&#x2F;span&gt;&lt;span&gt;(name):
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#88c0d0;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;Hello, &lt;&#x2F;span&gt;&lt;span&gt;{name}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;!&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;2-shu-xue-gong-shi-ru-guo-xu-yao&quot;&gt;2. 数学公式（如果需要）&lt;&#x2F;h3&gt;
+&lt;p&gt;可以添加 KaTeX 支持来显示数学公式。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;3-zi-ding-yi-yang-shi&quot;&gt;3. 自定义样式&lt;&#x2F;h3&gt;
+&lt;p&gt;您可以在文章中使用 HTML 和内联 CSS：&lt;&#x2F;p&gt;
+&lt;div style=&quot;background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 1rem; color: white; text-align: center; margin: 2rem 0;&quot;&gt;
+  &lt;h3 style=&quot;color: white; margin-bottom: 1rem;&quot;&gt;这是一个自定义样式的框&lt;&#x2F;h3&gt;
+  &lt;p style=&quot;margin: 0;&quot;&gt;您可以使用 HTML 和 CSS 来创建特殊的视觉效果&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;h2 id=&quot;clipboard-wen-zhang-xie-zuo-zui-jia-shi-jian&quot;&gt;📋 文章写作最佳实践&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;1-wen-jian-ming-ming&quot;&gt;1. 文件命名&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;使用小写字母和连字符：&lt;code&gt;my-awesome-post.md&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;可以包含日期：&lt;code&gt;2024-01-20-tutorial.md&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;避免空格和特殊字符&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;2-seo-you-hua&quot;&gt;2. SEO 优化&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;写好 &lt;code&gt;title&lt;&#x2F;code&gt; 和 &lt;code&gt;description&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;使用清晰的标题结构（H1, H2, H3）&lt;&#x2F;li&gt;
+&lt;li&gt;添加相关的标签和分类&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;3-nei-rong-jie-gou&quot;&gt;3. 内容结构&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;使用清晰的标题层次&lt;&#x2F;li&gt;
+&lt;li&gt;添加目录（如果文章较长）&lt;&#x2F;li&gt;
+&lt;li&gt;使用列表和代码块提高可读性&lt;&#x2F;li&gt;
+&lt;li&gt;添加相关图片和示例&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;4-fa-bu-liu-cheng&quot;&gt;4. 发布流程&lt;&#x2F;h3&gt;
+&lt;ol&gt;
+&lt;li&gt;在 &lt;code&gt;content&#x2F;blog&#x2F;&lt;&#x2F;code&gt; 创建新文件&lt;&#x2F;li&gt;
+&lt;li&gt;编写文章内容&lt;&#x2F;li&gt;
+&lt;li&gt;本地预览：&lt;code&gt;zola serve&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;提交到 Git：&lt;code&gt;git add . &amp;amp;&amp;amp; git commit -m &quot;Add new post&quot;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;推送到 GitHub：&lt;code&gt;git push&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Vercel 自动部署&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;rocket-fa-bu-wen-zhang&quot;&gt;🚀 发布文章&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;ben-di-yu-lan&quot;&gt;本地预览&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; your-blog-directory
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; serve
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;访问 &lt;code&gt;http:&#x2F;&#x2F;127.0.0.1:1111&lt;&#x2F;code&gt; 预览您的文章。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;bu-shu-dao-sheng-chan-huan-jing&quot;&gt;部署到生产环境&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; add .
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; commit -m &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;Add new blog post: 文章标题&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; push origin main
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Vercel 会自动检测到更改并重新部署您的网站。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;bulb-xie-zuo-ji-qiao&quot;&gt;💡 写作技巧&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;开头要吸引人&lt;&#x2F;strong&gt;：用一个有趣的问题或故事开始&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;使用小标题&lt;&#x2F;strong&gt;：将长文章分成易读的部分&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;添加代码示例&lt;&#x2F;strong&gt;：如果是技术文章，提供实际的代码&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;包含图片&lt;&#x2F;strong&gt;：视觉元素让文章更有趣&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;总结要点&lt;&#x2F;strong&gt;：在文章结尾总结主要观点&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;现在您已经知道如何在这个美丽的博客中写文章了！开始创作您的第一篇文章吧！🎉&lt;&#x2F;p&gt;
+</description>
+      </item>
       <item>
           <title>Getting Started with Zola: A Modern Static Site Generator</title>
           <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>

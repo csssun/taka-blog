@@ -186,9 +186,20 @@ zola serve
 
 <div align="center">
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/your-blog-repo)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/csssun/taka-blog1&project-name=my-zola-blog&repository-name=my-zola-blog)
+
+**🚀 点击按钮，30秒内完成部署！无需任何配置！**
 
 </div>
+
+#### ✨ 一键部署的优势
+
+- **🔧 零配置**: 项目已预配置所有必要文件
+- **🛡️ 兼容性保证**: 解决了 GLIBC 等常见部署问题
+- **⚡ 极速部署**: 优化的构建流程，2-3分钟完成
+- **🌍 全球 CDN**: 自动部署到 Vercel 全球边缘网络
+- **🔄 自动更新**: 每次 Git 推送自动重新部署
+- **📊 性能监控**: 内置性能分析和错误监控
 
 ### 📋 手动部署步骤
 
@@ -217,12 +228,12 @@ git push -u origin main
    - 选择您的 GitHub 仓库
    - 点击 "Import"
 
-3. **配置构建设置**
+3. **配置构建设置**（通常自动检测，无需手动配置）
    ```
-   Framework Preset: Other
-   Build Command: chmod +x build.sh && ./build.sh
-   Output Directory: public
-   Install Command: echo 'No install needed'
+   Framework Preset: Other (自动检测)
+   Build Command: npm run vercel-build (自动设置)
+   Output Directory: public (自动设置)
+   Install Command: npm install (自动设置)
    ```
 
 4. **部署**
@@ -528,11 +539,37 @@ menu = [
 <details>
 <summary><strong>🚀 Vercel 部署失败</strong></summary>
 
+**常见错误和解决方案：**
+
+**1. GLIBC 版本错误**
+```
+./zola: /lib64/libm.so.6: version `GLIBC_2.35' not found
+```
 **解决方案：**
-1. 检查 `vercel.json` 配置是否正确
-2. 确认 `build.sh` 文件有执行权限
-3. 查看 Vercel 构建日志中的错误信息
-4. 确认 GitHub 仓库权限设置正确
+- 项目已配置使用 musl 版本的 Zola（更兼容）
+- 如果仍有问题，尝试使用 Node.js 构建脚本
+
+**2. 构建脚本权限错误**
+```
+Permission denied: ./build.sh
+```
+**解决方案：**
+- 确保 `build.sh` 有执行权限
+- 或使用 Node.js 构建：修改 `vercel.json` 中的 `buildCommand` 为 `"node build-node.js"`
+
+**3. Zola 下载失败**
+```
+Failed to download Zola
+```
+**解决方案：**
+- 检查网络连接
+- 尝试不同的 Zola 版本
+- 使用备用下载源
+
+**4. 构建配置问题**
+- 检查 `vercel.json` 配置是否正确
+- 确认 `package.json` 中的构建脚本
+- 查看 Vercel 构建日志中的详细错误信息
 
 </details>
 
